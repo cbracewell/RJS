@@ -1,0 +1,63 @@
+{
+  "name": "rrjs",
+  "description": "React Redux JSON Schema",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "webpack-dev-server --hot"
+  },
+  "dependencies": {
+    "@types/react-jsonschema-form": "^1.0.1",
+    "@types/react-redux": "^5.0.10",
+    "@types/react-router": "^4.0.15",
+    "@types/react-router-dom": "^4.0.8",
+    "@types/react-transition-group": "^2.0.6",
+    "@types/redux-logger": "^3.0.5",
+    "autoprefixer": "7.1.2",
+    "case-sensitive-paths-webpack-plugin": "2.1.1",
+    "extract-text-webpack-plugin": "3.0.0",
+    "file-loader": "0.11.2",
+    "fs-extra": "3.0.1",
+    "html-webpack-plugin": "^2.30.1",
+    "lodash": "^4.17.4",
+    "react": "^16.0.0",
+    "react-dev-utils": "^4.0.1",
+    "react-dom": "^16.0.0",
+    "react-jsonschema-form": "^1.0.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "redux-logger": "^3.0.6",
+    "semantic-ui-react": "^0.75.0",
+    "source-map-loader": "^0.2.1",
+    "style-loader": "0.18.2",
+    "sw-precache-webpack-plugin": "0.11.4",
+    "ts-loader": "^2.2.1",
+    "tslint": "^5.2.0",
+    "tslint-loader": "^3.5.3",
+    "tslint-react": "^3.0.0",
+    "typescript": "~2.4.0",
+    "url-loader": "0.5.9",
+    "webpack": "3.5.1",
+    "webpack-dev-server": "2.7.1",
+    "webpack-manifest-plugin": "1.2.1",
+    "whatwg-fetch": "2.0.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^21.1.2",
+    "@types/lodash": "^4.14.77",
+    "@types/node": "^8.0.34",
+    "@types/react": "^16.0.10",
+    "@types/react-dom": "^16.0.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "html-loader": "^0.5.1",
+    "semantic-ui-css": "^2.2.14"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
+}

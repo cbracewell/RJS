@@ -1,0 +1,2 @@
+// Constants
+export const PLACEHOLDER_CONSTANT = 'PLACEHOLDER_CONSTANT';
