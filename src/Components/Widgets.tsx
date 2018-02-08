@@ -25,10 +25,8 @@ export const Input = (props: InputProps) => {
     'iconPosition'
   ];
   const { enumOptions, ...options } = props.options;
-  console.log('Input props', props);
 
   const onChange = (e: any, data: any) => {
-    console.log(data);
     props.onChange!(e, data.value);
   };
 
