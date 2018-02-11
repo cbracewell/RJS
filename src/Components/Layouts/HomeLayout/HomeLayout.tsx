@@ -3,8 +3,8 @@ import Form from 'react-jsonschema-form';
 import { Button } from 'semantic-ui-react';
 import { Schema } from './Schema';
 import { UISchema } from './UISchema';
-import widgets from '../../Components/Widgets';
-import fields from '../../Components/Fields';
+import widgets from '../../Widgets/Widgets';
+import fields from '../../Widgets/Fields';
 
 interface Props {
   onSubmission: any;
@@ -24,12 +24,13 @@ render() {
   return (
       <div style={styles}>
         <Form
-          fields={fields} // Customisable fields eg. Title, Description
-          liveValidate={true} // Live validation after every keystroke
+          className="homepage_form"
+          fields={fields}
+          // liveValidate={true}
           onChange={onChange}
           onError={onError}
           onSubmit={onSubmission}
-          schema={Schema} // 
+          schema={Schema}
           uiSchema={UISchema}
           validate={validation}
           widgets={widgets}
@@ -41,6 +42,11 @@ render() {
     ); 
   }
 }
-const styles = {};
+const styles = {
+  homepage_form: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 20px [col - start]) 5 %'
+  }
+};
 
 export default HomeLayout;

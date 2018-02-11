@@ -3,12 +3,7 @@ export const Schema: any = {
   className: 'ui container',
   description: 'A sweet form description',
   type: 'object',
-  required: [],
-  dependencies: {
-    city: [
-      'age'
-    ]
-  },
+  required: ['firstName', 'lastName', 'password'],
   properties: {
     fullName: {
       title: 'Full Name',
@@ -25,22 +20,18 @@ export const Schema: any = {
       }
     },
     city: {
-      type: 'string',
-      title: 'City'
+      title: 'City',
+      type: 'string'
     },
-    age: {
-      type: 'number',
-      title: 'Age'
-    },
-    passwordOne: {
+    password: {
       title: 'Password',
       type: 'string',
-      minLength: 3
+      minLength: 6
     },
-    passwordTwo: {
+    password_repeat: {
       title: 'Repeat password',
       type: 'string',
-      minLength: 3
+      minLength: 6
     }
   }
 };

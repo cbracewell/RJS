@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
-import HomePage from '../Pages/HomePage';
+import HomePage from '../Components/Pages/HomePage';
 
 export default () => (
   <Switch>

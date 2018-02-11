@@ -23,16 +23,10 @@ export const UISchema: UiSchema = {
       options: dropdownFormatter(['London', 'Glasgow', 'Manchester', 'Paris'])
     }
   },
-  age: {
-    'ui:widget': 'range'
-  },
-  passwordOne: {
+  password: {
     'ui:widget': 'Input'
   },
-  passwordTwo: {
+  password_repeat: {
     'ui:widget': 'Input'
-  },
-  date: {
-    'ui:widget': 'alt-datetime'
   }
 };

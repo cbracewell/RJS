@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import HomeLayout from '../Layouts/HomeLayout/HomeLayout';
+import HomeLayout from '../Components/Layouts/HomeLayout';
 
 interface Props {
   formData: any;
@@ -15,14 +15,15 @@ class HomeContainer extends React.Component<Props, State> {
 
   handleError = (errors: any) => {
     console.log(errors.length + ' errors left');
+    console.log(errors);
   }
 
   handleBlur = (values: any) => {
     console.log(values);
   }
 
-  handleChange = (values: any) => {
-    console.log(values);
+  handleChange = (formData: any) => {
+    // console.log(values);
   }
 
   validate = (formData: any, errors: any) => {

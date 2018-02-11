@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 // Layout
-import CoreLayout from '../Layouts/CoreLayout';
+import CoreLayout from '../Components/Layouts/CoreLayout';
 
 interface AppContainerProps {
   store: any;
