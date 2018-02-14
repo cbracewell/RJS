@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Form from 'react-jsonschema-form';
 import { Button } from 'semantic-ui-react';
-import { Schema } from './Schema';
-import { UISchema } from './UISchema';
-import widgets from '../../Widgets/Widgets';
+
+import { Schema, UISchema, Validation } from '../../FormSchema/BasicForm';
+import widgets from '../../Widgets/';
 import fields from '../../Widgets/Fields';
 
 interface Props {
@@ -11,7 +11,6 @@ interface Props {
   onError: any;
   onBlur: any;
   onChange: any;
-  validation: any;
 }
 
 interface State {}
@@ -19,20 +18,19 @@ interface State {}
 class HomeLayout extends React.Component<Props, State> {
 
 render() {
-  const { onSubmission, onError, onBlur, onChange, validation } = this.props;
+  const { onSubmission, onError, onBlur, onChange } = this.props;
 
   return (
       <div style={styles}>
         <Form
-          className="homepage_form"
+          className="basic_form"
           fields={fields}
-          // liveValidate={true}
           onChange={onChange}
           onError={onError}
           onSubmit={onSubmission}
           schema={Schema}
           uiSchema={UISchema}
-          validate={validation}
+          validate={Validation}
           widgets={widgets}
         >
           <Button type="submit">Submit</Button>
@@ -43,10 +41,6 @@ render() {
   }
 }
 const styles = {
-  homepage_form: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(3, 20px [col - start]) 5 %'
-  }
 };
 
 export default HomeLayout;

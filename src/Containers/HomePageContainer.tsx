@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { flow } from 'lodash';
 import { connect } from 'react-redux';
 import HomeLayout from '../Components/Layouts/HomeLayout';
 
@@ -14,8 +15,7 @@ class HomeContainer extends React.Component<Props, State> {
   }
 
   handleError = (errors: any) => {
-    console.log(errors.length + ' errors left');
-    console.log(errors);
+    errors.map((error: any, index: number) => console.log(`${index + 1} - ${error.stack}`));
   }
 
   handleBlur = (values: any) => {
@@ -26,21 +26,13 @@ class HomeContainer extends React.Component<Props, State> {
     // console.log(values);
   }
 
-  validate = (formData: any, errors: any) => {
-    console.log(errors);
-
-    return errors;
-  }
-
   render() {
-    console.log(this.props);
     return (
       <HomeLayout
         onSubmission={this.handleSubmission}
         onError={this.handleError}
         onBlur={this.handleBlur}
         onChange={this.handleChange}
-        validation={this.validate}
       />
     );
   }

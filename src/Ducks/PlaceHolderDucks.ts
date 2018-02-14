@@ -1,3 +1,4 @@
+import { handleActions } from 'redux-actions';
 import storeSchema from '../initialSchema';
 import { Action } from '../Store/reducers';
 import { PLACEHOLDER_CONSTANT } from '../constants';
@@ -22,7 +23,4 @@ const ACTION_HANDLERS = {
   }
 };
 
-export default function UserReducer(state: State = initialState, action: Action) {
-  const handler = ACTION_HANDLERS[action.type];
-  return handler ? handler(state, action) : state;
-}
+export default handleActions(ACTION_HANDLERS, initialState);
