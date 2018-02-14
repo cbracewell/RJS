@@ -3,6 +3,7 @@
   "description": "React Redux JSON Schema",
   "version": "0.1.0",
   "scripts": {
+    "build:prod": "webpack",
     "start": "webpack-dev-server --hot"
   },
   "dependencies": {
