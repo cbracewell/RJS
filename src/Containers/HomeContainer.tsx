@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { flow } from 'lodash';
 import { connect } from 'react-redux';
-import HomeLayout from '../Components/Layouts/HomeLayout';
+import Form from 'react-jsonschema-form';
+import customWidgets from '../Components/CustomComponents';
+import { Schema, UISchema, Validation } from '../Schemas/CheckoutSchema';
 
 interface Props {
   formData: any;
@@ -18,22 +19,31 @@ class HomeContainer extends React.Component<Props, State> {
     errors.map((error: any, index: number) => console.log(`${index + 1} - ${error.stack}`));
   }
 
-  handleBlur = (values: any) => {
-    console.log(values);
+  handleBlur = (id: any, value: any) => {
+    console.log(id, value);
   }
 
   handleChange = (formData: any) => {
-    // console.log(values);
+    // console.log(formData);
   }
 
   render() {
     return (
-      <HomeLayout
-        onSubmission={this.handleSubmission}
+      <Form
+        className="basic_form"
         onError={this.handleError}
-        onBlur={this.handleBlur}
+        onSubmit={this.handleSubmission}
         onChange={this.handleChange}
-      />
+        schema={Schema}
+        uiSchema={UISchema}
+        validate={Validation}
+        widgets={customWidgets}
+      >
+        <div className="btn-group" role="group" aria-label="Basic example">
+          <button type="submit" className="btn btn-primary">Submit</button>
+          <button type="button" className="btn btn-secondary">Cancel</button>
+        </div>
+      </Form>
     );
   }
 }

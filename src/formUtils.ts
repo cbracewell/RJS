@@ -1,4 +1,3 @@
-
 export const optionsDropdownFormatter = (arr: string[]) => arr.map(item => ({
   key: item, value: item, text: item
 }));

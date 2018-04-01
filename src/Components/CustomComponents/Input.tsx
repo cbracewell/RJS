@@ -1,9 +1,6 @@
 import * as React from 'react';
 import { pick } from 'lodash';
-import {
-  Input as SemanticInput,
-  InputProps
-} from 'semantic-ui-react';
+import { FormControl, FormControlProps, FormGroup, FormGroupProps, HelpBlock } from 'react-bootstrap';
 
 export default (props: any) => {
   const values = [
@@ -21,10 +18,13 @@ export default (props: any) => {
   const composedProps = {
     ...pick(props, values),
     ...options,
-    onChange: (e: any, { value }: InputProps) => props.onChange!(value)
+    onChange: (e: any, { value }: FormControlProps) => props.onChange!(value)
   };
 
   return (
-    <SemanticInput {...composedProps} />
+    <FormGroup>
+      <FormControl {...composedProps} />
+      <HelpBlock />
+    </FormGroup>
   ); 
 };
