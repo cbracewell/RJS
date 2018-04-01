@@ -8,11 +8,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
   entry: "./src/index.tsx",
   output: {
-    filename: "bundle.js"
-  },
-  output: {
     filename: "bundle.js",
-    filename: "rrjs.bundle.js",
     path: path.resolve(__dirname, "dist")
   },
   devtool: "inline-source-map",
