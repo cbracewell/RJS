@@ -3,8 +3,6 @@ import { Typeahead } from 'react-bootstrap-typeahead';
 import { optionsDropdownFormatter } from '../../formUtils';
 import { pick } from 'lodash';
 export default (props: any) => {
-  console.log('props', props);
-
   const {
     placeholder,
     autoFocus,
@@ -19,7 +17,8 @@ export default (props: any) => {
     options,
     placeholder
   };
-
+  console.log('Typeahread');
+  
   return (
     <Typeahead {...composedProps} />
   );

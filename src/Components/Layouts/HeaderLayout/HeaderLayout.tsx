@@ -15,8 +15,8 @@ const generateNav = (items: MenuItem[]) => items.map(({ url, label }, index) => 
 const links: MenuItem[] = [
   {url: '/', label: 'Home'},
   {url: '/basic-form', label: 'Basic'},
-  {url: '/dependencies', label: 'Dependencies'},
-  {url: '/login', label: 'login'},
+  {url: '/login', label: 'Login'},
+  {url: '/stepper', label: 'Stepper'},
 ];
 
 export default () => (

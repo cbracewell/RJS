@@ -1,4 +1,4 @@
-const Schema = {
+const Schema: any = {
   type: 'object',
   required: ['password', 'password_repeat'],
   title: 'Security',
@@ -8,7 +8,7 @@ const Schema = {
   }
 };
 
-const UISchema = {
+const UISchema: any = {
   password: { 'ui:widget': 'password' },
   password_repeat: { 'ui:widget': 'password' }
 };

@@ -2,8 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import Form from 'react-jsonschema-form';
-import Address from './Address.ts';
-import Password from './PasswordForm.ts';
+import Address from './AddressSchema.ts';
+import Password from './PasswordSchema.ts';
 
 storiesOf('Form Templates', module)
   .add('Address', () => (
