@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions';
 import Form from 'react-jsonschema-form';
 import Address from './AddressSchema.ts';
 import Password from './PasswordSchema.ts';
+import widgets from '../Components/CustomComponents/index.ts';
 
 storiesOf('Form Templates', module)
   .add('Address', () => (
@@ -12,6 +13,7 @@ storiesOf('Form Templates', module)
       onChange={(value) => console.log(value)}
       onError={(value) => console.log(value)}
       onSubmit={(value) => console.log(value)}
+      widgets={widgets}
       schema={Address.Schema}
       uiSchema={Address.UISchema}
     />

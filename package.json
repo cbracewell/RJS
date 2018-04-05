@@ -24,7 +24,7 @@
     "react-bootstrap-typeahead": "^3.0.0-alpha.2",
     "react-dev-utils": "^4.0.1",
     "react-dom": "^16.0.0",
-    "react-jsonschema-form": "^1.0.0",
+    "react-jsonschema-form": "^1.0.2",
     "react-jsonschema-form-extras": "^0.9.11",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",

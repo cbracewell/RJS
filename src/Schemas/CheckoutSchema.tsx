@@ -1,33 +1,40 @@
 import Address from './AddressSchema';
 import Password from './PasswordSchema';
-import Personnel from './PersonnelSchema';
+import Personnel from './PersonnelDetailsSchema';
 
 export const Schema: any = {
-  'title': 'Checkout',
-  'description': 'An example checkout form.',
-  'type': 'object',
-  'definitions': {
-    'personnel': Personnel.Schema,
-    'address': Address.Schema
+  title: 'Delivery',
+  description: 'An example delivery form.',
+  type: 'object',
+  definitions: {
+    personnel: Personnel.Schema,
+    address: Address.Schema
   },
+  required: [ 'delivery_address' ],
   properties: {
-    personnel: { '$ref': '#/definitions/personnel' },
-    delivery_address: { '$ref': '#/definitions/address' },
+    personnel: { title: 'Your details', '$ref': '#/definitions/personnel' },
+    delivery_address: { displayLabel: false, '$ref': '#/definitions/address' },
     same_as_delivery: {
-      type: 'boolean',
-      title: 'Does billing address match delivery address?'
-    },
-    billing_address: {
-      title: 'Billing Address',
-      '$ref': '#/definitions/address'
-    },
+        title: 'Does the billing address match your delivery?',
+        type: 'boolean',
+        default: 'Yes'
+    }
   },
   dependencies: {
     same_as_delivery: {
-      properties: {
-        billing_address: Address.Schema
-      },
-      required: ['billing_address']
+      oneOf: [
+        {
+          properties: {
+            same_as_delivery: { enum: [ true ] }
+          }
+        },
+        {
+          properties: {
+            same_as_delivery: { enum: [ false ] },
+            billing_address: { title: 'Billing Address', '$ref': '#/definitions/address' },
+          }
+        }
+      ]
     }
   }
 };
@@ -35,13 +42,15 @@ export const Schema: any = {
 export const UISchema: any = {
   personnel: Personnel.UISchema,
   delivery_address: Address.UISchema,
+  billing_address: Address.UISchema,
   same_as_delivery: {
     'ui:widget': 'checkbox',
     'ui:options': {
-      inline: true
+      inline: true,
+      displayLabel: false
     }
-  }
+  },
+  password: Password.UISchema,
 };
 
-export const Validation = (formData: any, errors: any) => ({
-});
+export const Validation = (formData: any, errors: any) => ({});

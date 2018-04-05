@@ -1,28 +1,44 @@
-import Personnel from '../Schemas/PersonnelSchema';
+import Personnel from '../Schemas/PersonnelDetailsSchema';
 import Address from '../Schemas/AddressSchema';
 import Password from '../Schemas/PasswordSchema';
 
 export const Schema: any = {
   [1]: {
     type: 'object',
-    title: 'Step 1',
-    properties: { personnel: Personnel.Schema }
+    definitions: { personnel: Personnel.Schema },
+    properties: {
+      personnel: {
+        title: 'Step 1 - Your address',
+        '$ref': '#/definitions/personnel'
+      }
+     }
   },
   [2]: {
     type: 'object',
-    title: 'Step 2',
-    properties: { address: Address.Schema }
+    definitions: { address: Address.Schema, },
+    properties: {
+      address: {
+        title: 'Step 2 - Your address',
+        '$ref': '#/definitions/address'
+      }
+     }
   },
   [3]: {
     type: 'object',
-    title: 'Step 3',
-    properties: { password: Password.Schema }
+    definitions: { password: Password.Schema },
+    properties: {
+      password: {
+        title: 'Step 3 - Your password',
+        '$ref': '#/definitions/password'
+      }
+     }
   },
 };
 
 export const UISchema: any = {
   address: Address.UISchema,
   personnel: Personnel.UISchema,
+  password: Password.UISchema,
 };
 
 export const Validation = (formData: any, errors: any) => ({

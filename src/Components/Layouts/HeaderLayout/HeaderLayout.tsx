@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import Modal from '../../CustomComponents/Modal';
 
 interface MenuItem {
   url: string;
@@ -13,11 +15,12 @@ const generateNav = (items: MenuItem[]) => items.map(({ url, label }, index) => 
 ));
 
 const links: MenuItem[] = [
-  {url: '/', label: 'Home'},
-  {url: '/basic-form', label: 'Basic'},
-  {url: '/login', label: 'Login'},
-  {url: '/stepper', label: 'Stepper'},
-];
+  { url: '/simple-form', label: 'Simple' },
+  { url: '/side-by-side', label: 'SideBySide' },
+  { url: '/login', label: 'Login' },
+  { url: '/stepper', label: 'Stepper' },
+  { url: '/checkout', label: 'Checkout' },
+];  
 
 export default () => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
