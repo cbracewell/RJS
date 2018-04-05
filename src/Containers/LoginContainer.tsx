@@ -3,12 +3,15 @@ import { connect } from 'react-redux';
 import Form, { ObjectFieldTemplateProps } from 'react-jsonschema-form';
 import customWidgets from '../Components/CustomComponents';
 import { Schema, UISchema, Validation } from '../Schemas/LoginSchema';
+import { Schema as SignUpSchema, UISchema as SignUpUISchema } from '../Schemas/SignUpSchema';
 
 interface Props {
   formData: any;
 }
 
-interface State {}
+interface State {
+  inLogin: boolean;
+}
 
 function getProperty(properties: ObjectFieldTemplateProps['properties'], name: string) {
   const element = properties.find(prop => prop.name === name);
@@ -30,6 +33,10 @@ function ObjectFieldTemplate({title, description, properties}: ObjectFieldTempla
 }
 
 class LoginContainer extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { inLogin: true };
+  }
   handleSubmission = (change: any) => {
     console.log('handleFormSubmission', change);
   }
@@ -42,19 +49,26 @@ class LoginContainer extends React.Component<Props, State> {
     console.log(id, value);
   }
 
-  handleChange = (formData: any) => {
-    console.log(formData);
+  handleToggle = () => {
+    this.setState({ inLogin: this.state.inLogin ? false : true });
   }
 
   render() {
-    // todo swap out for a signup
+    const { inLogin } = this.state;
     return (
-      <Form
-        schema={Schema}
-        uiSchema={UISchema}
-        validate={Validation}
-        ObjectFieldTemplate={ObjectFieldTemplate}
-      />
+      <div className="container">
+        <Form
+          schema={inLogin ? Schema : SignUpSchema}
+          uiSchema={inLogin ? UISchema : SignUpUISchema}
+          validate={inLogin ? Validation : undefined}
+          ObjectFieldTemplate={inLogin ? ObjectFieldTemplate : undefined}
+        >
+          <div className="btn-group" role="group" aria-label="Basic example">
+            <button type="button" onClick={this.handleToggle} className="btn btn-primary">Click here to {inLogin ? 'register' : 'login'}</button>
+            <button type="button" className="btn btn-secondary">{inLogin ? 'Login' : 'Register'}</button>
+          </div>
+        </Form>
+      </div>
     );
   }
 }

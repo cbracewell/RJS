@@ -1,8 +1,11 @@
 import Password from './PasswordSchema';
 
 export const Schema: any = {
-  title: 'Sign Up',
+  title: 'Register',
   type: 'object',
+  definitions: {
+    password: Password.Schema,
+  },
   properties: {
     username: {
       title: 'Username',
