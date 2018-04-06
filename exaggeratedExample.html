@@ -1,0 +1,1672 @@
+<form novalidate="novalidate" id="questionHolder" name="questionHolder" class="form-horizontal ng-invalid ng-invalid-required ng-valid-maxlength ng-dirty ng-valid-parse ng-valid-value-existing ng-valid-months ng-valid-confirmed"
+  data-msm-inline-signin-with-reload="" data-pre-population-template="{}" data-store-node-map="{}" data-store-params="{}" data-msm-unload-message=""
+  data-msm-integrity-check="" data-msm-set-submitted-flag-on-elements="" autocomplete="off" data-msm-auto-complete-off="" data-motor-person-selection-change-handler=""
+  data-msm-validate-postcode="" data-element-ready="formIsReady=true;" data-msm-scroll-to-add-driver-block="policyHolder_haveAdditionalDrivers"
+  method="post" motor-insurance-question-page="">
+  <span>
+    <p>
+      <strong>
+        <span class="question-step">Step 1 of 2</span>
+      </strong>
+    </p>
+  </span>
+  <h2 class="msm-title title-lg-left title-md-left title-xs-center ">
+    <span class=" "> You’re on your way to saving money!</span>
+  </h2>
+  <span>
+    <p style="padding-left: 20px; padding-right: 20px; padding-bottom: 20px;">Please answer all questions accurately and in full. Your policy will be sold to you on the basis of the information you
+      provide, and if your answers are incorrect or incomplete, your policy could be cancelled, or you might have a claim
+      rejected or not paid in full.</p>
+  </span>
+  <div>
+    <div class="questionset-section">
+      <h3 class="msm-title title-lg-left title-md-left title-xs-center ">
+        <span class=" "> Your car, your licence, and your policy</span>
+      </h3>
+
+      <div class="vehicle_carDetails" data-msm-defer-binding="">
+        <div class="row form-group ng-hide" id="vehicle.carDetails" data-ng-show="showCarDataSelector || showVehicleSummary" data-msm-scroll-anchor="vehicle.carDetails"
+          data-ng-class="{'has-error': questionHolder['vehicle.carDetails'].$invalid &amp;&amp; (questionHolder['vehicle.carDetails'].submitted || questionHolder['vehicle.carDetails'].$dirty || (false &amp;&amp; questionHolder['vehicle.carDetails'].$modelValue))}">
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 padding-md-r">
+            <label for="vehicle.carDetails" class="control-label" data-ng-if="answers.valueOf('') === undefined || showVehicleSummary">
+            The car </label>
+            <div class="help-block ng-hide" data-msm-error-tracking-show-error="(questionHolder['vehicle.carDetails'].submitted || questionHolder['vehicle.carDetails'].$dirty || (false &amp;&amp; questionHolder['vehicle.carDetails'].$modelValue)) &amp;&amp; questionHolder['vehicle.carDetails'].$error.required"
+              data-msm-error-tracking-show-error-event-type="inputerror">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">This field is mandatory!</div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right col-content padding-md-r">
+            <div data-msm-car-details="" data-ng-init="vehicleListDisplayFields =['makeName','modelName','manufacturedFromYear','manufacturedToYear','engineTypeId', 'engineLitres', 'transmissionId', 'doors', 'variantName']; vehicleListDisplayCfg={'engineLitres': 'L ','doors': ' doors ','manufacturedFromYear' : ' - '}; vehicleDecode={'transmissionId':{'1':'Manual','2':'Automatic'},'engineTypeId':{'1':'Petrol','2':'Diesel','3':'Electric'}}">
+
+
+              <msm-vehicle-look-up-message class="" data-msg="Did you mean ?" data-zero-o="We've changed the <b>0</b> (zero) to an <b>O</b> (letter). Please check this is correct."
+                data-o-zero="We've changed the <b>O</b> (letter) to a <b>0</b> (zero). Please check this is correct." data-both="We've changed the <b>0</b> (zero) to an <b>O</b> (letter) and we've changed the <b>O</b> (letter) to a <b>0</b> (zero). Please check this is correct."></msm-vehicle-look-up-message>
+              <button id="notTheRightCarButton" data-ng-show="showVehicleSummary" type="button" data-ng-click="hideCarSummary('other'); setFocusOnElementBySelectorWithTimeout('input[id=&quot;knownRegnumbertrue&quot;]');"
+                class="btn btn-link btn-link-simple ng-hide">Not the right car?
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="knownRegnumber" data-msm-defer-binding="">
+        <div class="row form-group" id="knownRegnumber" data-ng-class="{'has-error': questionHolder['knownRegnumber'].$invalid &amp;&amp; (questionHolder['knownRegnumber'].submitted || questionHolder['knownRegnumber'].$dirty || (false &amp;&amp; questionHolder['knownRegnumber'].$modelValue))}"
+          data-ng-show="showKnownRegnumber" data-ng-controller="KnownRegnumberCtrl" data-msm-error-tracking="knownRegnumber"
+          data-msm-scroll-anchor="knownRegnumber">
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 padding-md-r">
+            <label for="knownRegnumber" class="control-label" data-msm-label="{&quot;DEFAULT&quot;:{defaultLabel:&quot;Do you know the registration number of the car?&quot;,dynamicLabel:&quot;&quot;}, &quot;ACCOUNT_HOLDER_IS_NOT_POLICY_HOLDER&quot;:{defaultLabel:&quot;Do they know the registration number of the car?&quot;,dynamicLabel:&quot;&quot;}}"
+              data-msm-dynamic-label-decorator="{prefix: '<em>', postfix:'</em>'}">
+              <span data-ng-bind-html="rewordedLabel">Do you know the registration number of the car?</span>
+            </label>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right col-content padding-md-r">
+            <div class="help-block ng-hide" data-msm-error-tracking-show-error="(questionHolder['knownRegnumber'].submitted || questionHolder['knownRegnumber'].$dirty || (false &amp;&amp; questionHolder['knownRegnumber'].$modelValue)) &amp;&amp; questionHolder['knownRegnumber'].$error.required"
+              data-msm-error-tracking-show-error-event-type="inputerror">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">This field is mandatory!</div>
+            </div>
+            <div class="styled-radio toggle-radio ng-pristine ng-untouched ng-valid ng-not-empty" data-name="knownRegnumber" tabindex="-1"
+              data-ng-model="knownRegnumberTmp" data-ng-init="knownRegnumberTmp=getKnownRegnumber()" data-msm-error-tracking-view-change="">
+              <span>
+                <input type="radio" data-ng-value="'true'" id="knownRegnumbertrue" data-ng-model="knownRegnumberTmp" data-ng-change="knownRegnumberChanged(knownRegnumberTmp)"
+                  data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-not-empty" name="15"
+                  value="true">
+                <label for="knownRegnumbertrue">Yes</label>
+              </span>
+              <span>
+                <input type="radio" data-ng-value="'false'" id="knownRegnumberfalse" data-ng-model="knownRegnumberTmp" data-ng-change="knownRegnumberChanged(knownRegnumberTmp)"
+                  data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-not-empty" name="16"
+                  value="false">
+                <label for="knownRegnumberfalse">No</label>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="regnumber" data-msm-defer-binding="">
+        <div class="row form-group highlight--help" id="regnumber" data-ng-class="{'has-error': (questionHolder.carLookupButton.$error.required &amp;&amp; questionHolder['regnumber'].submitted) || (questionHolder['regnumber'].$invalid &amp;&amp; (questionHolder['regnumber'].submitted || questionHolder['regnumber'].$touched)) || regnumberNotFound || emptyRegnumber || invalidRegnumber || ( questionHolder['regnumber'].$error.regnumber &amp;&amp; questionHolder['regnumber'].$viewValue )}"
+          data-ng-controller="RegNumberCtrl" data-ng-if="showRegnumberSelector()" data-msm-error-tracking="regnumber" data-msm-scroll-anchor="regnumber"
+          data-msm-question-set-help-aggregate="" data-msm-error-tracking-enabled="">
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 padding-md-r">
+            <label for="regnumber" class="control-label" data-msm-label="{&quot;DEFAULT&quot;:{defaultLabel:&quot;What is the registration?&quot;,dynamicLabel:&quot;&quot;}, &quot;ACCOUNT_HOLDER_IS_NOT_POLICY_HOLDER&quot;:{defaultLabel:&quot;&quot;,dynamicLabel:&quot;&quot;}}"
+              data-msm-dynamic-label-decorator="{prefix: '<em>', postfix:'</em>'}">
+              <span data-ng-bind-html="rewordedLabel">What is the registration?</span>
+            </label>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right col-content padding-md-r">
+            <button type="button" tabindex="-1" class="helptext__mobile-button"></button>
+            <div class="helptext">
+              <div data-ng-class="breakpoint.current === 'md' || breakpoint.current === 'lg' ? 'helptext--desktop' : 'helptext--mobile'"
+                class="helptext--desktop">
+                <div class="helptext__content">
+                  <p>
+                    <strong>Brand new car?&nbsp;</strong>
+                  </p>
+                  <p>Sometimes our system doesn’t recognise the registration numbers for brand new cars straight away.&nbsp;</p>
+                  <p>If your car is brand new, and has been released this year, please choose ‘No’ and give us the details of
+                    the car manually. Don’t worry, this won’t take long.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div data-ng-show="questionHolder.regnumber.$error.regnumber || emptyRegnumber || regnumberNotFound || questionHolder.regnumber.$error.required || questionHolder.carLookupButton.$error.required || ((questionHolder['regnumber'].submitted || questionHolder['regnumber'].$dirty || (false &amp;&amp; questionHolder['regnumber'].$modelValue)) &amp;&amp; questionHolder['regnumber'].$error.parse)"
+              class="help-block">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder" data-msm-error-tracking-show-error="emptyRegnumber || questionHolder.regnumber.$error.required || ((questionHolder['regnumber'].submitted || questionHolder['regnumber'].$dirty || (false &amp;&amp; questionHolder['regnumber'].$modelValue)) &amp;&amp; questionHolder['regnumber'].$error.parse)"
+                data-msm-error-tracking-show-error-event-type="inputerror"> Please enter a registration number
+              </div>
+              <div class="message_holder ng-hide" data-msm-error-tracking-show-error="questionHolder.regnumber.$error.regnumber &amp;&amp; !questionHolder.regnumber.$error.required &amp;&amp; !(recognizedVanRegNumber || recognizedMotorbikeRegNumber)"
+                data-msm-error-tracking-show-error-event-type="validation"> Please enter a valid registration
+              </div>
+              <div class="message_holder ng-hide" data-msm-error-tracking-show-error="regnumberNotFound" data-msm-error-tracking-show-error-event-type="validation">
+              There is a problem with your Registration number.
+                <a class="btn-link btn-link-simple" data-ng-click="carDataLookup(questionHolder['regnumber'])">Please try again</a> or find your car
+                <a class="btn-link btn-link-simple" data-ng-click="knownRegnumberChanged('false'); setFocusOnElementBySelectorWithTimeout('input[id=make1]');">by make and model</a>.
+              </div>
+              <div class="message_holder ng-hide" data-msm-error-tracking-show-error="questionHolder.regnumber.$error.regnumber &amp;&amp; recognizedVanRegNumber"
+                data-msm-error-tracking-show-error-event-type="validation">
+                <p>It looks like the registration you entered is for a van.</p>
+                <p>
+                  <a href="https://www.moneysupermarket.com/van-insurance/vehicle.launch?PolicyType=GV&amp;CompanyName=vanquote&amp;brandName=default&amp;from=car-registration-error"
+                    adhocenable="false" data-msm-interaction-custom-event="click" data-msm-interaction-events="click" data-msm-interaction-type="linkInteraction"
+                    data-msm-interaction-id="Van Registration Journey Links" class="btn-link btn-link-simple" target="_blank">Get a van insurance quote.</a>
+                </p>
+              </div>
+              <div class="message_holder ng-hide" data-msm-error-tracking-show-error="questionHolder.regnumber.$error.regnumber &amp;&amp; recognizedMotorbikeRegNumber"
+                data-msm-error-tracking-show-error-event-type="validation">
+                <p>It looks like the registration you entered is for a motorbike.</p>
+                <p>
+                  <a href="https://www.moneysupermarket.com/motorbike-insurance/start.php?k=628&amp;from=car-registration-error" adhocenable="false"
+                    data-msm-interaction-custom-event="click" data-msm-interaction-events="click" data-msm-interaction-type="linkInteraction"
+                    data-msm-interaction-id="Bike Registration Journey Links" class="btn-link btn-link-simple" target="_blank">Get a motorbike insurance quote.</a>
+                </p>
+              </div>
+              <div class="message_holder ng-hide" data-msm-error-tracking-show-error="questionHolder.carLookupButton.$error.required &amp;&amp; questionHolder.regnumber.$valid"
+                data-msm-error-tracking-show-error-event-type="inputerror">Please click on the button to find car by reg number
+              </div>
+            </div>
+            <input type="text" class="form-control text-uppercase car-registration__input ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
+              data-ng-model-options="{updateOn: 'blur'}" data-ng-keyup="inputChange=true; regnumberNotFound=false; carLookupButtonSubmitted=false"
+              data-motor-regnumber="" data-msm-answer-store-key="" data-ng-required="true" data-msm-answer-store-action="{'regnumberUpdate': {'targets': [{}]}}"
+              data-msm-charset="[a-zA-Z0-9 ]" data-msm-error-tracking-view-change="" id="regnumber" name="regnumber" data-ng-model="regnumber"
+              maxlength="10" data-msm-field-interaction-events="click" placeholder="e.g. ABC 1234" required="required">
+            <button type="button" class="btn btn-find car-registration__button ng-pristine ng-untouched ng-empty ng-valid ng-valid-required"
+              data-ng-model="carLookupButton" data-name="carLookupButton" data-ng-required="!showCarDataSelector &amp;&amp; regnumber &amp;&amp; !carLookupButtonSubmitted"
+              data-ng-click="carLookupButtonSubmitted = true; carDataLookup(questionHolder['regnumber']); ">
+              Find car
+            </button>
+          </div>
+          <div class="col-xs-12 padding-md-r ng-hide" data-ng-show="regnumberLookupFaliure">
+            <div class="service-failure">
+              <div class="alert alert-warning alert-dismissible">
+                <span class="icon msm-sprite-lg-alert-square"></span>
+                <span class="error">
+                  <span>Oops!</span> There's a problem with the vehicle lookup service.
+                  <br>
+                  <button type="button" class="btn-link btn-link-simple" data-ng-click="carDataLookup(questionHolder['regnumber'])">Please try again</button> or find your car
+                  <button type="button" class="btn-link btn-link-simple" data-ng-click="knownRegnumberChanged('false')">by make and model</button>. </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="postcode" data-msm-defer-binding="" data-ng-if="userinfo('user.userType')!=='signed-in' &amp;&amp; (!answers.valueOf('postcode') || questionHolder['postcode'].$dirty || !answers.valueOf('_meta.postcode.validityState'))">
+        <div class="row form-group " id="postcode" data-ng-class="{'has-error': questionHolder['postcode'].$error.postcode || ((questionHolder['postcode'].$error.postcodeNotFound || questionHolder['postcode'].$error.required || questionHolder['postcode'].$error.postcodeServiceDown) &amp;&amp; (questionHolder['postcode'].submitted || questionHolder['postcode'].$touched) || (questionHolder['postcode'].$error.findAddressClick &amp;&amp; (questionHolder['postcode'].$touched &amp;&amp; !questionHolder['postcode'].$viewValue)))}"
+          data-msm-error-tracking="postcode" data-msm-postcode-revalidation-callback="" data-msm-set-focus-on-fake-element=""
+          data-postcode-keys="{'postcode': 'postcode', 'houseNumber': 'houseNumber', 'houseNumberRegExp': '^[^\s]+([ ][^\s]+)*$'}"
+          data-msm-scroll-anchor="postcode" data-ng-if="showPostcode()" data-msm-postcode="{serverSideValidation: true,lateValidation:true}"
+          data-msm-error-tracking-enabled="">
+          <div class="row form-group form-group--postcode-error">
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right col-content padding-md-r">
+              <div class="help-block ng-hide" data-msm-error-tracking-show-error="questionHolder['postcode'].$error.postcode || (questionHolder['postcode'].$viewValue &amp;&amp; questionHolder['postcode'].$error.postcodeNotFound)"
+                data-msm-error-tracking-show-error-event-type="inputerror">
+                <div class="msm-sprite-lg-alert-square"></div>
+                <div class="message_holder">Oops - are you sure? This doesn't look right</div>
+              </div>
+              <div class="help-block ng-hide" data-msm-error-tracking-show-error="(questionHolder.submitted &amp;&amp; questionHolder['postcode'].$error.required) || (questionHolder['postcode'].$touched &amp;&amp; questionHolder['postcode'].$error.required)"
+                data-msm-error-tracking-show-error-event-type="inputerror">
+                <div class="msm-sprite-lg-alert-square"></div>
+                <div class="message_holder">Please enter a valid postcode and click 'Find address'</div>
+              </div>
+            </div>
+          </div>
+          <div class="row form-group form-group--postcode-house-number" data-ng-show="true">
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 padding-md-r">
+              <label id="postcodeLabel" for="postcode" class="control-label">
+                What's your house number or name? </label>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right col-content padding-md-r">
+              <input id="houseNumber" data-name="houseNumber" data-ng-model="houseNumber" placeholder="house number or name (optional)"
+                class="form-control form-field ng-pristine ng-untouched ng-valid ng-empty" autocomplete="off" data-msm-answer-store-key=""
+                data-ng-model-options="{updateOn: 'blur'}" data-msm-error-tracking-view-change="">
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 padding-md-r">
+            <label id="postcodeLabel" for="postcode" class="control-label"> What's your postcode? </label>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right col-content padding-md-r">
+            <div class="postcode-manage">
+              <div class="manage-group">
+                <input id="postcode" name="postcode" data-ng-model="postcode" maxlength="8" placeholder="e.g. CH5 3UZ" data-msm-charset="[a-zA-Z0-9]\s?"
+                  data-msm-field-interaction-events="click" data-ng-change="returnedUserCheck()" class="form-control form-field text-uppercase ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
+                  autocomplete="off" data-msm-answer-store-key="" data-ng-required="true" data-ng-model-options="{updateOn: 'blur'}"
+                  data-no-reset-for-ng-if="" data-msm-error-tracking-view-change="" data-msm-answer-store-action="" required="required">
+              </div>
+            </div>
+            <button type="button" class="btn btn-find" data-msm-interaction-id="Address.Find" data-msm-interaction-events="click" data-ng-click="validatePostcode()">
+            Find address
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 padding-md-r ng-hide" data-ng-show="questionHolder['postcode'].$error.postcodeServiceDown">
+            <div class="service-failure">
+              <div class="alert alert-warning alert-dismissible">
+                <span class="icon msm-sprite-lg-alert-square"></span>
+                <span class="error"> Oops! There was a problem processing your input. </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="policyHolder_dateOfBirth" data-msm-defer-binding="">
+        <div class="row form-group hide-when-error highlight--help policyholder-dateofbirth__form-group" id="policyHolder.dateOfBirth"
+          data-ng-class="{'has-error': questionHolder['policyHolder.dateOfBirth'].$invalid &amp;&amp; (questionHolder['policyHolder.dateOfBirth'].submitted || questionHolder['policyHolder.dateOfBirth'].$dirty || (true &amp;&amp; questionHolder['policyHolder.dateOfBirth'].$modelValue))}"
+          data-msm-error-tracking="policyHolder.dateOfBirth" data-msm-scroll-anchor="policyHolder.dateOfBirth" data-msm-question-set-help-aggregate=""
+          data-msm-error-tracking-enabled="">
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 padding-md-r">
+            <label for="policyHolder.dateOfBirth" class="control-label policyholder-dateofbirth__control-label" data-msm-label="{&quot;DEFAULT&quot;:{defaultLabel:&quot;What is your date of birth?&quot;,dynamicLabel:&quot;&quot;}, &quot;ACCOUNT_HOLDER_IS_NOT_POLICY_HOLDER&quot;:{defaultLabel:&quot;&quot;,dynamicLabel:&quot;&quot;}}"
+              data-msm-dynamic-label-decorator="{prefix: '<em>', postfix:'</em>'}">
+              <span data-ng-bind-html="rewordedLabel">What is your date of birth?</span>
+            </label>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right col-content padding-md-r">
+            <button type="button" tabindex="-1" class="helptext__mobile-button"></button>
+            <div class="helptext">
+              <div data-ng-class="breakpoint.current === 'md' || breakpoint.current === 'lg' ? 'helptext--desktop' : 'helptext--mobile'"
+                class="helptext--desktop">
+                <div class="helptext__content">
+                  <p>
+                    <strong>Why do we ask?</strong>
+                  </p>
+                  <p>Insurance costs can vary by age - insurers use how people drive at different ages to decide how likely
+                    they might be to claim on their insurance.</p>
+                </div>
+              </div>
+            </div>
+            <div data-msm-error-tracking-show-error="(questionHolder['policyHolder.dateOfBirth'].submitted || questionHolder['policyHolder.dateOfBirth'].$dirty || (true &amp;&amp; questionHolder['policyHolder.dateOfBirth'].$modelValue)) &amp;&amp; questionHolder['policyHolder.dateOfBirth'].$error.required"
+              data-msm-error-tracking-show-error-event-type="inputerror" class="help-block ng-hide">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">Please let us know when you were born</div>
+            </div>
+            <div data-msm-error-tracking-show-error="questionHolder['policyHolder.dateOfBirth'].$error.rangeearlier &amp;&amp; !questionHolder['policyHolder.dateOfBirth'].$error.required &amp;&amp; (questionHolder['policyHolder.dateOfBirth'].submitted || questionHolder['policyHolder.dateOfBirth'].$dirty || (true &amp;&amp; questionHolder['policyHolder.dateOfBirth'].$modelValue))"
+              data-msm-error-tracking-show-error-event-type="validation" class="help-block ng-hide">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">Oops - are you sure? This doesn't look right</div>
+            </div>
+            <div data-msm-error-tracking-show-error="questionHolder['policyHolder.dateOfBirth'].$error.rangelater &amp;&amp; !questionHolder['policyHolder.dateOfBirth'].$error.required &amp;&amp; (questionHolder['policyHolder.dateOfBirth'].submitted || questionHolder['policyHolder.dateOfBirth'].$dirty || (true &amp;&amp; questionHolder['policyHolder.dateOfBirth'].$modelValue))"
+              data-msm-error-tracking-show-error-event-type="validation" class="help-block ng-hide">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">Oops - it doesn't look like you're old enough to drive a car
+              </div>
+            </div>
+            <div id="policyHolder.dateOfBirth" data-name="policyHolder.dateOfBirth" data-ng-model="policyHolder.dateOfBirth" data-ng-change="returnedUserCheck()"
+              data-msm-error-tracking-view-change="" data-msm-date-range="['today - 100 years', 'today - 16 years']" data-ng-required="true"
+              data-msm-answer-store-key="" data-msm-smart-date-field="{dayLabel: 'DD', monthLabel: 'MM', yearLabel: 'YYYY', useCenturyPrefix: true}"
+              data-msm-field-interaction-events="focus" data-msm-field-interaction-selector=".smart-date-field__input" class="ng-untouched ng-empty ng-valid-parse ng-invalid ng-invalid-required ng-pristine"
+              required="required">
+              <span class="smart-date-field form-control">
+                <input type="tel" name="policyHolder.dateOfBirth.day" class="smart-date-field__input smart-date-field__day ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"
+                  autocomplete="off" maxlength="2" placeholder="DD" data-ng-model="day" data-msm-update-model-on-blur="" data-msm-charset="[0-9]">
+                <span class="smart-date-field__separator">/</span>
+                <input type="tel" name="policyHolder.dateOfBirth.month" class="smart-date-field__input smart-date-field__month ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"
+                  autocomplete="off" maxlength="2" placeholder="MM" data-ng-model="month" data-msm-update-model-on-blur=""
+                  data-msm-charset="[0-9]">
+                <span class="smart-date-field__separator">/</span>
+                <input type="tel" name="policyHolder.dateOfBirth.year" class="smart-date-field__input smart-date-field__year ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"
+                  autocomplete="off" placeholder="YYYY" maxlength="4" data-ng-model="year" data-msm-update-model-on-blur=""
+                  data-msm-charset="[0-9]">
+              </span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 qs__extra-content padding-md-r"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="questionset-section">
+      <h3 class="msm-title title-lg-left title-md-left title-xs-center ">
+        <span class=" "> Your driving licence</span>
+      </h3>
+      <div class="policyHolder_licenceTypeId" data-msm-defer-binding="">
+        <div class="row form-group hide-when-error highlight--help policyholder-licencetypeid__form-group" id="policyHolder.licenceTypeId"
+          data-ng-class="{'has-error': questionHolder['policyHolder.licenceTypeId'].$invalid &amp;&amp; (questionHolder['policyHolder.licenceTypeId'].submitted || questionHolder['policyHolder.licenceTypeId'].$dirty || (false &amp;&amp; questionHolder['policyHolder.licenceTypeId'].$modelValue))}"
+          data-msm-error-tracking="policyHolder.licenceTypeId" data-msm-scroll-anchor="policyHolder.licenceTypeId" data-msm-question-set-help-aggregate=""
+          data-msm-error-tracking-enabled="">
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 padding-md-r">
+            <label for="policyHolder.licenceTypeId" class="control-label policyholder-licencetypeid__control-label" data-msm-label="{&quot;DEFAULT&quot;:{defaultLabel:&quot;Which kind of driving licence do you have? &quot;,dynamicLabel:&quot;&quot;}, &quot;ACCOUNT_HOLDER_IS_NOT_POLICY_HOLDER&quot;:{defaultLabel:&quot;&quot;,dynamicLabel:&quot;&quot;}}"
+              data-msm-dynamic-label-decorator="{prefix: '<em>', postfix:'</em>'}">
+              <span data-ng-bind-html="rewordedLabel">Which kind of driving licence do you have? </span>
+            </label>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right col-content padding-md-r">
+            <button type="button" tabindex="-1" class="helptext__mobile-button"></button>
+            <div class="helptext">
+              <div data-ng-class="breakpoint.current === 'md' || breakpoint.current === 'lg' ? 'helptext--desktop' : 'helptext--mobile'"
+                class="helptext--desktop">
+                <div class="helptext__content">
+                  <p>
+                    <strong>Why do we ask?</strong>
+                  </p>
+                  <p>Insurers want to understand how you’ll be driving. People with a provisional licence will always have someone
+                    in the car with them when they drive, for example.&nbsp;
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="help-block ng-hide" data-msm-error-tracking-show-error="(questionHolder['policyHolder.licenceTypeId'].submitted || questionHolder['policyHolder.licenceTypeId'].$dirty || (false &amp;&amp; questionHolder['policyHolder.licenceTypeId'].$modelValue)) &amp;&amp; questionHolder['policyHolder.licenceTypeId'].$error.required"
+              data-msm-error-tracking-show-error-event-type="inputerror">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">Please let us know which kind of licence you have</div>
+            </div>
+            <div class="styled-radio selection-list" tabindex="-1">
+              <div data-name="policyHolder.licenceTypeId" data-ng-model="policyHolder.licenceTypeId" data-ng-required="true" data-ng-init="policyHolder.licenceTypeId='full'"
+                data-msm-check-existing-value="" data-msm-answer-store-key="" data-msm-error-tracking-view-change="" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required ng-valid-value-existing"
+                required="required">
+                <input type="radio" data-msm-touch="" data-ng-value="'full'" id="policyHolder.licenceTypeIdfull" data-ng-model="policyHolder.licenceTypeId"
+                  data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-not-empty" name="25"
+                  value="full">
+                <label for="policyHolder.licenceTypeIdfull">Full</label>
+                <input type="radio" data-msm-touch="" data-ng-value="'provisional'" id="policyHolder.licenceTypeIdprovisional"
+                  data-ng-model="policyHolder.licenceTypeId" data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                  name="26" value="provisional">
+                <label for="policyHolder.licenceTypeIdprovisional">Provisional</label>
+                <input type="radio" data-msm-touch="" data-ng-value="'medical_restricted'" id="policyHolder.licenceTypeIdmedical_restricted"
+                  data-ng-model="policyHolder.licenceTypeId" data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                  name="27" value="medical_restricted">
+                <label for="policyHolder.licenceTypeIdmedical_restricted">Medically restricted</label>
+                <input type="radio" data-msm-touch="" data-ng-value="'other'" id="policyHolder.licenceTypeIdother" data-ng-model="policyHolder.licenceTypeId"
+                  data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-not-empty" name="28"
+                  value="other">
+                <label for="policyHolder.licenceTypeIdother">Other</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 qs__extra-content padding-md-r"></div>
+        </div>
+      </div>
+
+      <div class="policyHolder_howLongHaveYouGotYourLicense" data-msm-defer-binding="">
+        <span class="ng-hide" data-msm-integrity-rule="birthdate_licence_years_got"></span>
+        <div class="row form-group hide-when-error highlight--help policyholder-howlonghaveyougotyourlicense__form-group" id="policyHolder.howLongHaveYouGotYourLicense"
+          data-ng-class="{'has-error': questionHolder['policyHolder.howLongHaveYouGotYourLicense'].$invalid &amp;&amp; (questionHolder['policyHolder.howLongHaveYouGotYourLicense'].submitted || questionHolder['policyHolder.howLongHaveYouGotYourLicense'].$dirty || (false &amp;&amp; questionHolder['policyHolder.howLongHaveYouGotYourLicense'].$modelValue)) || (questionHolder['policyHolder.howLongHaveYouGotYourLicense'].$valid &amp;&amp; questionHolder.integrity['birthdate_licence_years_got'])}"
+          data-msm-error-tracking="policyHolder.howLongHaveYouGotYourLicense" data-msm-scroll-anchor="policyHolder.howLongHaveYouGotYourLicense"
+          data-msm-question-set-help-aggregate="" data-msm-error-tracking-enabled="">
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 padding-md-r">
+            <label for="policyHolder.howLongHaveYouGotYourLicense" class="control-label policyholder-howlonghaveyougotyourlicense__control-label"
+              data-msm-label="{&quot;DEFAULT&quot;:{defaultLabel:&quot;How many years have you held your current licence?&quot;,dynamicLabel:&quot;&quot;}, &quot;ACCOUNT_HOLDER_IS_NOT_POLICY_HOLDER&quot;:{defaultLabel:&quot;&quot;,dynamicLabel:&quot;&quot;}}"
+              data-msm-dynamic-label-decorator="{prefix: '<em>', postfix:'</em>'}">
+              <span data-ng-bind-html="rewordedLabel">How many years have you held your current licence?</span>
+            </label>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right col-content padding-md-r">
+            <button type="button" tabindex="-1" class="helptext__mobile-button"></button>
+            <div class="helptext">
+              <div data-ng-class="breakpoint.current === 'md' || breakpoint.current === 'lg' ? 'helptext--desktop' : 'helptext--mobile'"
+                class="helptext--desktop">
+                <div class="helptext__content">
+                  <p>
+                    <strong>Why do we ask?</strong>
+                  </p>
+                  <p>Insurers use how much driving experience you have to help work out the price you pay.
+                  </p>
+                  <p>Please tell us how long you’ve held your current driving licence, if you're unsure then check on the back
+                    of your licence for the ‘valid from’ date</p>
+                </div>
+              </div>
+            </div>
+            <div data-msm-error-tracking-show-error="(questionHolder['policyHolder.howLongHaveYouGotYourLicense'].submitted || questionHolder['policyHolder.howLongHaveYouGotYourLicense'].$dirty || (false &amp;&amp; questionHolder['policyHolder.howLongHaveYouGotYourLicense'].$modelValue)) &amp;&amp; questionHolder['policyHolder.howLongHaveYouGotYourLicense'].$error.required"
+              data-msm-error-tracking-show-error-event-type="inputerror" class="help-block ng-hide">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">Please let us know how many years you have held you current driving licence
+              </div>
+            </div>
+            <div data-msm-error-tracking-show-error="(questionHolder['policyHolder.howLongHaveYouGotYourLicense'].submitted || questionHolder['policyHolder.howLongHaveYouGotYourLicense'].$dirty || (false &amp;&amp; questionHolder['policyHolder.howLongHaveYouGotYourLicense'].$modelValue)) &amp;&amp; questionHolder['policyHolder.howLongHaveYouGotYourLicense'].$error.months"
+              data-msm-error-tracking-show-error-event-type="inputerror" class="help-block ng-hide">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">Please let us know how many months you have have held you current driving licence
+              </div>
+            </div>
+            <div data-msm-error-tracking-show-error="questionHolder['policyHolder.howLongHaveYouGotYourLicense'].$valid &amp;&amp; questionHolder.integrity['birthdate_licence_years_got']"
+              data-msm-error-tracking-show-error-event-type="validation" class="help-block ng-hide">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">Oops - it doesn't look like you are old enough to have been driving for this long
+              </div>
+            </div>
+            <div class="row year-month-selector ng-pristine ng-untouched ng-valid-months ng-empty ng-invalid ng-invalid-required" id="policyHolder.howLongHaveYouGotYourLicense"
+              tabindex="-1" data-name="policyHolder.howLongHaveYouGotYourLicense" data-ng-model="policyHolder.howLongHaveYouGotYourLicense"
+              data-ng-required="true" data-msm-error-tracking-view-change="" data-msm-answer-store-key="" data-motor-year-month-selector="{yearLabel: 'Years', monthLabel: 'Months', lessThanOneLabel: 'Less than one', showMonthThreshold: '4'}"
+              data-msm-field-interaction-events="click change" data-msm-field-interaction-selector=" .year-month-selector__month-select.dropdown .dropdown-toggle, .year-month-selector__month-select.dropdown .dropdown-menu, .year-month-selector__year-select.dropdown .dropdown-toggle, .year-month-selector__year-select.dropdown .dropdown-menu, .nativedropdown-wrapper select.form-control "
+              required="required">
+              <div class="year-month-selector__year-select dropdown col-lg-7 col-md-7 col-sm-7 col-xs-7 ng-pristine ng-untouched ng-valid ng-empty"
+                data-ng-model="year" data-msm-dropdown="[[0,&quot;Less than one&quot;],[1,1],[2,2],[3,3],[4,4],[5,5],[6,6],[7,7],[8,8],[9,9],[10,10],[11,11],[12,12],[13,13],[14,14],[15,15],[16,16],[17,17],[18,18],[19,19],[20,20],[21,21],[22,22],[23,23],[24,24],[25,25],[26,26],[27,27],[28,28],[29,29],[30,30],[31,31],[32,32],[33,33],[34,34],[35,35],[36,36],[37,37],[38,38],[39,39],[40,40],[41,41],[42,42],[43,43],[44,44],[45,45],[46,46],[47,47],[48,48],[49,49],[50,50],[51,51],[52,52],[53,53],[54,54],[55,55],[56,56],[57,57],[58,58],[59,59],[60,&quot;60+&quot;]]"
+                data-msm-dropdown-placeholder="Years" data-ng-change="yearMonthSelectorCtrl.yearChanged()">
+                <div class="nativedropdown-wrapper form-control" data-ng-class="{'nativedropdown-wrapper--selected': styleSelected}">
+                  <select data-ng-model="nativeSelectedItem" data-ng-disabled="isDisabled()" data-ng-options="item[0] as item[1] for item in nativeItems"
+                    class="nativedropdown-wrapper__native form-control ng-pristine ng-untouched ng-valid ng-empty">
+                    <option value="" data-ng-show="true" selected="selected" class="ng-hide">Years</option>
+                    <option label="Less than one" value="number:0">Less than one</option>
+                    <option label="1" value="number:1">1</option>
+                    <option label="2" value="number:2">2</option>
+                    <option label="3" value="number:3">3</option>
+                    <option label="4" value="number:4">4</option>
+                    <option label="5" value="number:5">5</option>
+                    <option label="6" value="number:6">6</option>
+                    <option label="7" value="number:7">7</option>
+                    <option label="8" value="number:8">8</option>
+                    <option label="9" value="number:9">9</option>
+                    <option label="10" value="number:10">10</option>
+                    <option label="11" value="number:11">11</option>
+                    <option label="12" value="number:12">12</option>
+                    <option label="13" value="number:13">13</option>
+                    <option label="14" value="number:14">14</option>
+                    <option label="15" value="number:15">15</option>
+                    <option label="16" value="number:16">16</option>
+                    <option label="17" value="number:17">17</option>
+                    <option label="18" value="number:18">18</option>
+                    <option label="19" value="number:19">19</option>
+                    <option label="20" value="number:20">20</option>
+                    <option label="21" value="number:21">21</option>
+                    <option label="22" value="number:22">22</option>
+                    <option label="23" value="number:23">23</option>
+                    <option label="24" value="number:24">24</option>
+                    <option label="25" value="number:25">25</option>
+                    <option label="26" value="number:26">26</option>
+                    <option label="27" value="number:27">27</option>
+                    <option label="28" value="number:28">28</option>
+                    <option label="29" value="number:29">29</option>
+                    <option label="30" value="number:30">30</option>
+                    <option label="31" value="number:31">31</option>
+                    <option label="32" value="number:32">32</option>
+                    <option label="33" value="number:33">33</option>
+                    <option label="34" value="number:34">34</option>
+                    <option label="35" value="number:35">35</option>
+                    <option label="36" value="number:36">36</option>
+                    <option label="37" value="number:37">37</option>
+                    <option label="38" value="number:38">38</option>
+                    <option label="39" value="number:39">39</option>
+                    <option label="40" value="number:40">40</option>
+                    <option label="41" value="number:41">41</option>
+                    <option label="42" value="number:42">42</option>
+                    <option label="43" value="number:43">43</option>
+                    <option label="44" value="number:44">44</option>
+                    <option label="45" value="number:45">45</option>
+                    <option label="46" value="number:46">46</option>
+                    <option label="47" value="number:47">47</option>
+                    <option label="48" value="number:48">48</option>
+                    <option label="49" value="number:49">49</option>
+                    <option label="50" value="number:50">50</option>
+                    <option label="51" value="number:51">51</option>
+                    <option label="52" value="number:52">52</option>
+                    <option label="53" value="number:53">53</option>
+                    <option label="54" value="number:54">54</option>
+                    <option label="55" value="number:55">55</option>
+                    <option label="56" value="number:56">56</option>
+                    <option label="57" value="number:57">57</option>
+                    <option label="58" value="number:58">58</option>
+                    <option label="59" value="number:59">59</option>
+                    <option label="60+" value="number:60">60+</option>
+                  </select>
+                  <span class="nativedropdown-wrapper__caret glyphicon glyphicon-chevron-down"></span>
+                </div>
+              </div>
+              <div class="year-month-selector__month-select dropdown col-lg-5 col-md-5 col-sm-5 col-xs-5 ng-pristine ng-untouched ng-valid ng-empty ng-hide"
+                data-ng-show="year < showMonthThreshold" data-ng-model="month" data-msm-dropdown="[[0,0],[1,1],[2,2],[3,3],[4,4],[5,5],[6,6],[7,7],[8,8],[9,9],[10,10],[11,11]]"
+                data-msm-dropdown-placeholder="Months" data-ng-change="yearMonthSelectorCtrl.monthChanged()">
+                <div class="nativedropdown-wrapper form-control" data-ng-class="{'nativedropdown-wrapper--selected': styleSelected}">
+                  <select data-ng-model="nativeSelectedItem" data-ng-disabled="isDisabled()" data-ng-options="item[0] as item[1] for item in nativeItems"
+                    class="nativedropdown-wrapper__native form-control ng-pristine ng-untouched ng-valid ng-empty">
+                    <option value="" data-ng-show="true" selected="selected" class="ng-hide">Months</option>
+                    <option label="0" value="number:0">0</option>
+                    <option label="1" value="number:1">1</option>
+                    <option label="2" value="number:2">2</option>
+                    <option label="3" value="number:3">3</option>
+                    <option label="4" value="number:4">4</option>
+                    <option label="5" value="number:5">5</option>
+                    <option label="6" value="number:6">6</option>
+                    <option label="7" value="number:7">7</option>
+                    <option label="8" value="number:8">8</option>
+                    <option label="9" value="number:9">9</option>
+                    <option label="10" value="number:10">10</option>
+                    <option label="11" value="number:11">11</option>
+                  </select>
+                  <span class="nativedropdown-wrapper__caret glyphicon glyphicon-chevron-down"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 qs__extra-content padding-md-r"></div>
+        </div>
+      </div>
+      <div class="policyHolder_licenseIssued" data-msm-defer-binding="" data-ng-if="answers.valueOf('policyHolder.licenceTypeId') === 'full'">
+        <div class="row form-group hide-when-error highlight--help policyholder-licenseissued__form-group" id="policyHolder.licenseIssued"
+          data-ng-class="{'has-error': questionHolder['policyHolder.licenseIssued'].$invalid &amp;&amp; (questionHolder['policyHolder.licenseIssued'].submitted || questionHolder['policyHolder.licenseIssued'].$dirty || (false &amp;&amp; questionHolder['policyHolder.licenseIssued'].$modelValue))}"
+          data-msm-error-tracking="policyHolder.licenseIssued" data-msm-scroll-anchor="policyHolder.licenseIssued" data-msm-question-set-help-aggregate=""
+          data-msm-error-tracking-enabled="">
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 padding-md-r">
+            <label for="policyHolder.licenseIssued" class="control-label policyholder-licenseissued__control-label" data-msm-label="{&quot;DEFAULT&quot;:{defaultLabel:&quot;Where was your licence issued? &quot;,dynamicLabel:&quot;&quot;}, &quot;ACCOUNT_HOLDER_IS_NOT_POLICY_HOLDER&quot;:{defaultLabel:&quot;&quot;,dynamicLabel:&quot;&quot;}}"
+              data-msm-dynamic-label-decorator="{prefix: '<em>', postfix:'</em>'}">
+              <span data-ng-bind-html="rewordedLabel">Where was your licence issued? </span>
+            </label>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right col-content padding-md-r">
+            <button type="button" tabindex="-1" class="helptext__mobile-button"></button>
+            <div class="helptext">
+              <div data-ng-class="breakpoint.current === 'md' || breakpoint.current === 'lg' ? 'helptext--desktop' : 'helptext--mobile'"
+                class="helptext--desktop">
+                <div class="helptext__content">
+                  <p>
+                    <strong>Wondering whether your licence was issued in a European Union (EU) nation?</strong>
+                  </p>
+                  <p>These countries are currently in the European Union: Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech
+                    Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania,
+                    Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden, United
+                    Kingdom</p>
+                </div>
+              </div>
+            </div>
+            <div class="help-block ng-hide" data-msm-error-tracking-show-error="(questionHolder['policyHolder.licenseIssued'].submitted || questionHolder['policyHolder.licenseIssued'].$dirty || (false &amp;&amp; questionHolder['policyHolder.licenseIssued'].$modelValue)) &amp;&amp; questionHolder['policyHolder.licenseIssued'].$error.required"
+              data-msm-error-tracking-show-error-event-type="inputerror">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">Please let us know where your licence was issued</div>
+            </div>
+            <div class="styled-radio selection-list" tabindex="-1">
+              <div data-name="policyHolder.licenseIssued" data-ng-model="policyHolder.licenseIssued" data-ng-required="true" data-ng-init="policyHolder.licenseIssued='1'"
+                data-msm-check-existing-value="" data-msm-answer-store-key="" data-msm-error-tracking-view-change="" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required ng-valid-value-existing"
+                required="required">
+                <input type="radio" data-msm-touch="" data-ng-value="'1'" id="policyHolder.licenseIssued1" data-ng-model="policyHolder.licenseIssued"
+                  data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-not-empty" name="108"
+                  value="1">
+                <label for="policyHolder.licenseIssued1">UK</label>
+                <input type="radio" data-msm-touch="" data-ng-value="'2'" id="policyHolder.licenseIssued2" data-ng-model="policyHolder.licenseIssued"
+                  data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-not-empty" name="109"
+                  value="2">
+                <label for="policyHolder.licenseIssued2">EU</label>
+                <input type="radio" data-msm-touch="" data-ng-value="'3'" id="policyHolder.licenseIssued3" data-ng-model="policyHolder.licenseIssued"
+                  data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-not-empty" name="110"
+                  value="3">
+                <label for="policyHolder.licenseIssued3">Europe (Non-EU)</label>
+                <input type="radio" data-msm-touch="" data-ng-value="'4'" id="policyHolder.licenseIssued4"
+                  data-ng-model="policyHolder.licenseIssued" data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                  name="111" value="4">
+                <label for="policyHolder.licenseIssued4">International</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 qs__extra-content padding-md-r"></div>
+        </div>
+      </div>
+
+      <div class="policyHolder_licenseTransmissionTypeId" data-msm-defer-binding="" data-ng-if="answers.valueOf('policyHolder.licenceTypeId') === 'full' &amp;&amp; answers.valueOf('policyHolder.licenseIssued') === '1'">
+        <div class="row form-group hide-when-error policyholder-licensetransmissiontypeid__form-group" id="policyHolder.licenseTransmissionTypeId"
+          data-ng-class="{'has-error': questionHolder['policyHolder.licenseTransmissionTypeId'].$invalid &amp;&amp; (questionHolder['policyHolder.licenseTransmissionTypeId'].submitted || questionHolder['policyHolder.licenseTransmissionTypeId'].$dirty || (false &amp;&amp; questionHolder['policyHolder.licenseTransmissionTypeId'].$modelValue))}"
+          data-msm-error-tracking="policyHolder.licenseTransmissionTypeId" data-msm-scroll-anchor="policyHolder.licenseTransmissionTypeId"
+          data-msm-error-tracking-enabled="">
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 padding-md-r">
+            <label for="policyHolder.licenseTransmissionTypeId" class="control-label policyholder-licensetransmissiontypeid__control-label"
+              data-msm-label="{&quot;DEFAULT&quot;:{defaultLabel:&quot;Does your licence cover manual cars or just automatics?&quot;,dynamicLabel:&quot;&quot;}, &quot;ACCOUNT_HOLDER_IS_NOT_POLICY_HOLDER&quot;:{defaultLabel:&quot;&quot;,dynamicLabel:&quot;&quot;}}"
+              data-msm-dynamic-label-decorator="{prefix: '<em>', postfix:'</em>'}">
+              <span data-ng-bind-html="rewordedLabel">Does your licence cover manual cars or just automatics?</span>
+            </label>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right col-content padding-md-r">
+            <div class="help-block ng-hide" data-msm-error-tracking-show-error="(questionHolder['policyHolder.licenseTransmissionTypeId'].submitted || questionHolder['policyHolder.licenseTransmissionTypeId'].$dirty || (false &amp;&amp; questionHolder['policyHolder.licenseTransmissionTypeId'].$modelValue)) &amp;&amp; questionHolder['policyHolder.licenseTransmissionTypeId'].$error.required"
+              data-msm-error-tracking-show-error-event-type="inputerror">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">Please let us know if your licence covers manuals or is just for automatics
+              </div>
+            </div>
+            <div class="styled-radio selection-list" tabindex="-1">
+              <div data-name="policyHolder.licenseTransmissionTypeId" data-ng-model="policyHolder.licenseTransmissionTypeId" data-ng-required="true"
+                data-ng-init="policyHolder.licenseTransmissionTypeId='1'" data-msm-check-existing-value="" data-msm-answer-store-key=""
+                data-msm-error-tracking-view-change="" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required ng-valid-value-existing"
+                required="required">
+                <input type="radio" data-msm-touch="" data-ng-value="'1'" id="policyHolder.licenseTransmissionTypeId1" data-ng-model="policyHolder.licenseTransmissionTypeId"
+                  data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-not-empty" name="114"
+                  value="1">
+                <label for="policyHolder.licenseTransmissionTypeId1">Manual and automatic</label>
+                <input type="radio" data-msm-touch="" data-ng-value="'2'" id="policyHolder.licenseTransmissionTypeId2"
+                  data-ng-model="policyHolder.licenseTransmissionTypeId" data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                  name="115" value="2">
+                <label for="policyHolder.licenseTransmissionTypeId2">Automatic only</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 qs__extra-content padding-md-r"></div>
+        </div>
+      </div>
+      <div class="policyHolder_additionalDrivingQualifications" data-msm-defer-binding="" data-ng-if="answers.valueOf('policyHolder.licenceTypeId') === 'full' &amp;&amp; answers.valueOf('policyHolder.licenseIssued') === '1' &amp;&amp; answers.valueOf('policyHolder.licenseTransmissionTypeId') === '1'">
+        <div class="row form-group hide-when-error highlight--help policyholder-additionaldrivingqualifications__form-group" id="policyHolder.additionalDrivingQualifications"
+          data-ng-class="{'has-error': questionHolder['policyHolder.additionalDrivingQualifications'].$invalid &amp;&amp; (questionHolder['policyHolder.additionalDrivingQualifications'].submitted || questionHolder['policyHolder.additionalDrivingQualifications'].$dirty || (false &amp;&amp; questionHolder['policyHolder.additionalDrivingQualifications'].$modelValue))}"
+          data-msm-error-tracking="policyHolder.additionalDrivingQualifications" data-msm-scroll-anchor="policyHolder.additionalDrivingQualifications"
+          data-msm-question-set-help-aggregate="" data-msm-error-tracking-enabled="">
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 padding-md-r">
+            <label for="policyHolder.additionalDrivingQualifications" class="control-label policyholder-additionaldrivingqualifications__control-label"
+              data-msm-label="{&quot;DEFAULT&quot;:{defaultLabel:&quot;Do you have any additional driving qualifications? &quot;,dynamicLabel:&quot;&quot;}, &quot;ACCOUNT_HOLDER_IS_NOT_POLICY_HOLDER&quot;:{defaultLabel:&quot;&quot;,dynamicLabel:&quot;&quot;}}"
+              data-msm-dynamic-label-decorator="{prefix: '<em>', postfix:'</em>'}">
+              <span data-ng-bind-html="rewordedLabel">Do you have any additional driving qualifications? </span>
+            </label>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right col-content padding-md-r">
+            <button type="button" tabindex="-1" class="helptext__mobile-button"></button>
+            <div class="helptext">
+              <div data-ng-class="breakpoint.current === 'md' || breakpoint.current === 'lg' ? 'helptext--desktop' : 'helptext--mobile'"
+                class="helptext--desktop">
+                <div class="helptext__content">
+                  <p>
+                    <strong>What do we mean?</strong>
+                  </p>
+                  <p>After your driving test, you can take further driving courses to improve your driving skills.</p>
+                  <p>You may pay less for your car insurance if you have an additional driving qualification.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="help-block ng-hide" data-msm-error-tracking-show-error="(questionHolder['policyHolder.additionalDrivingQualifications'].submitted || questionHolder['policyHolder.additionalDrivingQualifications'].$dirty || (false &amp;&amp; questionHolder['policyHolder.additionalDrivingQualifications'].$modelValue)) &amp;&amp; questionHolder['policyHolder.additionalDrivingQualifications'].$error.required"
+              data-msm-error-tracking-show-error-event-type="inputerror">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">Please let us know if you have any additional qualifications
+              </div>
+            </div>
+            <div class="styled-radio toggle-radio  ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" data-ng-init="policyHolder.additionalDrivingQualifications='false'"
+              data-name="policyHolder.additionalDrivingQualifications" data-ng-model="policyHolder.additionalDrivingQualifications"
+              tabindex="-1" data-ng-required="true" data-msm-as-text="No" data-msm-answer-store-key="" data-msm-error-tracking-view-change=""
+              required="required">
+              <span class="styled-radio__input">
+                <input type="radio" data-msm-touch="" data-ng-value="'true'" id="policyHolder.additionalDrivingQualificationstrue"
+                  data-ng-model="policyHolder.additionalDrivingQualifications" data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                  name="118" value="true">
+                <label for="policyHolder.additionalDrivingQualificationstrue">Yes</label>
+              </span>
+              <span class="styled-radio__input">
+                <input type="radio" data-msm-touch="" data-ng-value="'false'" id="policyHolder.additionalDrivingQualificationsfalse"
+                  data-ng-model="policyHolder.additionalDrivingQualifications" data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                  name="119" value="false">
+                <label for="policyHolder.additionalDrivingQualificationsfalse">No</label>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 qs__extra-content padding-md-r"></div>
+        </div>
+      </div>
+
+      <div class="policyHolder_hasMedicalConditionsAffectingDriving" data-msm-defer-binding="">
+        <div class="row form-group hide-when-error highlight--help policyholder-hasmedicalconditionsaffectingdriving__form-group"
+          id="policyHolder.hasMedicalConditionsAffectingDriving" data-ng-class="{'has-error': questionHolder['policyHolder.hasMedicalConditionsAffectingDriving'].$invalid &amp;&amp; (questionHolder['policyHolder.hasMedicalConditionsAffectingDriving'].submitted || questionHolder['policyHolder.hasMedicalConditionsAffectingDriving'].$dirty || (false &amp;&amp; questionHolder['policyHolder.hasMedicalConditionsAffectingDriving'].$modelValue))}"
+          data-msm-error-tracking="policyHolder.hasMedicalConditionsAffectingDriving" data-msm-scroll-anchor="policyHolder.hasMedicalConditionsAffectingDriving"
+          data-msm-question-set-help-aggregate="" data-msm-error-tracking-enabled="">
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 padding-md-r">
+            <label for="policyHolder.hasMedicalConditionsAffectingDriving" class="control-label policyholder-hasmedicalconditionsaffectingdriving__control-label"
+              data-msm-label="{&quot;DEFAULT&quot;:{defaultLabel:&quot;Do you have any medical conditions or disabilities that the DVLA needs to be notified of? &quot;,dynamicLabel:&quot;&quot;}, &quot;ACCOUNT_HOLDER_IS_NOT_POLICY_HOLDER&quot;:{defaultLabel:&quot;&quot;,dynamicLabel:&quot;&quot;}}"
+              data-msm-dynamic-label-decorator="{prefix: '<em>', postfix:'</em>'}">
+              <span data-ng-bind-html="rewordedLabel">Do you have any medical conditions or disabilities that the DVLA needs to be notified of? </span>
+            </label>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right col-content padding-md-r">
+            <button type="button" tabindex="-1" class="helptext__mobile-button"></button>
+            <div class="helptext">
+              <div data-ng-class="breakpoint.current === 'md' || breakpoint.current === 'lg' ? 'helptext--desktop' : 'helptext--mobile'"
+                class="helptext--desktop">
+                <div class="helptext__content">
+                  <p>
+                    <strong>Wondering what to include?</strong>
+                  </p>
+                  <p>Insurers and the DVLA need to know about health conditions you have that may affect your driving. If you’re
+                    unsure, the DVLA has a list of the conditions you need to tell them about&nbsp;
+                    <u>
+                      <a href="https://www.gov.uk/health-conditions-and-driving" target="_blank">here</a>
+                    </u>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="help-block ng-hide" data-msm-error-tracking-show-error="(questionHolder['policyHolder.hasMedicalConditionsAffectingDriving'].submitted || questionHolder['policyHolder.hasMedicalConditionsAffectingDriving'].$dirty || (false &amp;&amp; questionHolder['policyHolder.hasMedicalConditionsAffectingDriving'].$modelValue)) &amp;&amp; questionHolder['policyHolder.hasMedicalConditionsAffectingDriving'].$error.required"
+              data-msm-error-tracking-show-error-event-type="inputerror">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">Please let us know if you have any medical conditions</div>
+            </div>
+            <div class="styled-radio toggle-radio  ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-name="policyHolder.hasMedicalConditionsAffectingDriving"
+              data-ng-model="policyHolder.hasMedicalConditionsAffectingDriving" tabindex="-1" data-ng-required="true" data-msm-answer-store-key=""
+              data-msm-error-tracking-view-change="" required="required">
+              <span class="styled-radio__input">
+                <input type="radio" data-msm-touch="" data-ng-value="'true'" id="policyHolder.hasMedicalConditionsAffectingDrivingtrue"
+                  data-ng-model="policyHolder.hasMedicalConditionsAffectingDriving" data-msm-field-interaction-events="click"
+                  class="ng-pristine ng-untouched ng-valid ng-empty" name="121" value="true">
+                <label for="policyHolder.hasMedicalConditionsAffectingDrivingtrue">Yes</label>
+              </span>
+              <span class="styled-radio__input">
+                <input type="radio" data-msm-touch="" data-ng-value="'false'" id="policyHolder.hasMedicalConditionsAffectingDrivingfalse"
+                  data-ng-model="policyHolder.hasMedicalConditionsAffectingDriving" data-msm-field-interaction-events="click"
+                  class="ng-pristine ng-untouched ng-valid ng-empty" name="122" value="false">
+                <label for="policyHolder.hasMedicalConditionsAffectingDrivingfalse">No</label>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 qs__extra-content padding-md-r"></div>
+        </div>
+      </div>
+
+      <div class="policyHolder_drivesAnyOtherCars" data-msm-defer-binding="">
+        <div class="row form-group hide-when-error highlight--help policyholder-drivesanyothercars__form-group" id="policyHolder.drivesAnyOtherCars"
+          data-ng-class="{'has-error': questionHolder['policyHolder.drivesAnyOtherCars'].$invalid &amp;&amp; (questionHolder['policyHolder.drivesAnyOtherCars'].submitted || questionHolder['policyHolder.drivesAnyOtherCars'].$dirty || (false &amp;&amp; questionHolder['policyHolder.drivesAnyOtherCars'].$modelValue))}"
+          data-msm-error-tracking="policyHolder.drivesAnyOtherCars" data-msm-scroll-anchor="policyHolder.drivesAnyOtherCars"
+          data-msm-question-set-help-aggregate="" data-msm-error-tracking-enabled="">
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 padding-md-r">
+            <label for="policyHolder.drivesAnyOtherCars" class="control-label policyholder-drivesanyothercars__control-label"
+              data-msm-label="{&quot;DEFAULT&quot;:{defaultLabel:&quot;Do you drive any other cars?&quot;,dynamicLabel:&quot;&quot;}, &quot;ACCOUNT_HOLDER_IS_NOT_POLICY_HOLDER&quot;:{defaultLabel:&quot;&quot;,dynamicLabel:&quot;&quot;}}"
+              data-msm-dynamic-label-decorator="{prefix: '<em>', postfix:'</em>'}">
+              <span data-ng-bind-html="rewordedLabel">Do you drive any other cars?</span>
+            </label>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right col-content padding-md-r">
+            <button type="button" tabindex="-1" class="helptext__mobile-button"></button>
+            <div class="helptext">
+              <div data-ng-class="breakpoint.current === 'md' || breakpoint.current === 'lg' ? 'helptext--desktop' : 'helptext--mobile'"
+                class="helptext--desktop">
+                <div class="helptext__content">
+                  <p>
+                    <strong>Why does it matter?</strong>
+                  </p>
+                  <p>Insurers will take other cars into account when working out the price to insure this car.</p>
+                </div>
+              </div>
+            </div>
+            <div class="help-block ng-hide" data-msm-error-tracking-show-error="(questionHolder['policyHolder.drivesAnyOtherCars'].submitted || questionHolder['policyHolder.drivesAnyOtherCars'].$dirty || (false &amp;&amp; questionHolder['policyHolder.drivesAnyOtherCars'].$modelValue)) &amp;&amp; questionHolder['policyHolder.drivesAnyOtherCars'].$error.required"
+              data-msm-error-tracking-show-error-event-type="inputerror">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">Please let us know if you drive any other cars</div>
+            </div>
+            <div class="styled-radio toggle-radio  ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-name="policyHolder.drivesAnyOtherCars"
+              data-ng-model="policyHolder.drivesAnyOtherCars" tabindex="-1" data-ng-required="true" data-msm-answer-store-key=""
+              data-msm-error-tracking-view-change="" required="required">
+              <span class="styled-radio__input">
+                <input type="radio" data-msm-touch="" data-ng-value="'true'" id="policyHolder.drivesAnyOtherCarstrue" data-ng-model="policyHolder.drivesAnyOtherCars"
+                  data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-empty" name="124" value="true">
+                <label for="policyHolder.drivesAnyOtherCarstrue">Yes</label>
+              </span>
+              <span class="styled-radio__input">
+                <input type="radio" data-msm-touch="" data-ng-value="'false'" id="policyHolder.drivesAnyOtherCarsfalse" data-ng-model="policyHolder.drivesAnyOtherCars"
+                  data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-empty" name="125" value="false">
+                <label for="policyHolder.drivesAnyOtherCarsfalse">No</label>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 qs__extra-content padding-md-r"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div>
+    <div class="questionset-section">
+      <h3 class="msm-title title-lg-left title-md-left title-xs-center ">
+        <span class=" "> Claims &amp; convictions</span>
+      </h3>
+      <span class="ng-hide" data-msm-integrity-rule="confirm_claims"></span>
+      <div>
+        <div class="toggle-error-with-list" data-ng-class="{'has-error hide-inner-errors': true &amp;&amp; questionHolder.integrity['confirm_claims']}"
+          data-msm-scroll-anchor="policyHolder.claimsExists.toggle-error-with-list">
+          <div class="policyHolder_claimsExists" data-msm-defer-binding="">
+            <span class="ng-hide" data-msm-integrity-rule="confirm_claims_expanded"></span>
+            <div class="row form-group block-animation highlight--help policyholder-claimsexists__form-group" id="policyHolder.claimsExists"
+              data-ng-class="{'has-error': questionHolder['policyHolder.claimsExists'].$invalid &amp;&amp; (questionHolder['policyHolder.claimsExists'].submitted || questionHolder['policyHolder.claimsExists'].$dirty || (false &amp;&amp; questionHolder['policyHolder.claimsExists'].$modelValue)) &amp;&amp; !questionHolder['policyHolder.claimsExists'].$error.confirmed || questionHolder.integrity['confirm_claims_expanded']}"
+              data-msm-error-tracking="policyHolder.claimsExists" data-msm-scroll-anchor="policyHolder.claimsExists" data-msm-question-set-help-aggregate=""
+              data-msm-question-set-help-aggregate-init-open="true" data-msm-error-tracking-enabled="">
+              <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 policyholder-claimsexists padding-md-r">
+                <label for="policyHolder.claimsExists" class="control-label toggle-with-confirm__label policyholder-claimsexists__control-label msm-animate-enabled"
+                  data-ng-class="{'ng-invalid': questionHolder['policyHolder.claimsExists'].$invalid &amp;&amp; (questionHolder['policyHolder.claimsExists'].submitted || questionHolder['policyHolder.claimsExists'].$dirty || (false &amp;&amp; questionHolder['policyHolder.claimsExists'].$modelValue)) &amp;&amp; !questionHolder['policyHolder.claimsExists'].$error.confirmed || questionHolder.integrity['confirm_claims_expanded']}"
+                  data-msm-animate-on-breakpoints="xs sm md lg">
+                  <span class="toggle-with-confirm__label" data-msm-label="{&quot;DEFAULT&quot;:{defaultLabel:&quot;Have you had any driving incidents or made any insurance claims in the last 5 years?&quot;,dynamicLabel:&quot;&quot;}, &quot;ACCOUNT_HOLDER_IS_NOT_POLICY_HOLDER&quot;:{defaultLabel:&quot;&quot;,dynamicLabel:&quot;&quot;}}"
+                    data-msm-dynamic-label-decorator="{prefix: '<em>', postfix:'</em>'}">
+                    <span data-ng-bind-html="rewordedLabel">Have you had any driving incidents or made any insurance claims in the last 5 years?</span>
+                  </span>
+                  <span class="toggle-with-confirm__message">Are you sure you want to remove this?</span>
+                </label>
+                <div class="question-description question-description--policyholder-claimsexists">
+                  <p style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px;">
+                    &nbsp;If you don't tell your insurer about previous incidents or claims, your car insurance may not pay out</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 policyholder-claimsexists pull-right col-content padding-md-r">
+                <button type="button" tabindex="-1" class="helptext__mobile-button"></button>
+                <div class="helptext">
+                  <div data-ng-class="breakpoint.current === 'md' || breakpoint.current === 'lg' ? 'helptext--desktop' : 'helptext--mobile'"
+                    class="helptext--desktop">
+                    <div class="helptext__content">
+                      <p>
+                        <strong>What about claims that are going through at the moment?</strong>
+                      </p>
+                      <p>Please include any claims that haven’t been finalised. And if you’re not sure who was at fault, please
+                        write down that you, the policy holder, were at fault.</p>
+                    </div>
+                    <div class="helptext__content--additional">
+                      <div class="clearfix"></div>
+                      <div class="msm-b-video">
+                        <div class="wistia_embed wistia_async_xdeniy9jz5 videoFoam=true wistia_embed_initialized" id="wistia-xdeniy9jz5-1">
+                          <div id="wistia_chrome_29" class="w-chrome" style="display: inline-block; height: 100%; margin: 0px; padding: 0px; position: relative; vertical-align: top; width: 100%; zoom: 1; outline: none; overflow: hidden; box-sizing: content-box;">
+                            <div id="wistia_grid_41_wrapper" style="display: block;">
+                              <div id="wistia_grid_41_above"></div>
+                              <div id="wistia_grid_41_main">
+                                <div id="wistia_grid_41_behind"></div>
+                                <div id="wistia_grid_41_center">
+                                  <div class="w-video-wrapper w-css-reset" style="clip: rect(0px, 0px, 0px, 0px); height: 100%; position: absolute; top: 0px; width: 100%; background-color: rgb(0, 0, 0);"></div>
+                                  <div class="w-ui-container" style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"></div>
+                                </div>
+                                <div id="wistia_grid_41_front"></div>
+                                <div id="wistia_grid_41_top_inside">
+                                  <div id="wistia_grid_41_top"></div>
+                                </div>
+                                <div id="wistia_grid_41_bottom_inside">
+                                  <div id="wistia_grid_41_bottom"></div>
+                                </div>
+                                <div id="wistia_grid_41_left_inside">
+                                  <div id="wistia_grid_41_left"></div>
+                                </div>
+                                <div id="wistia_grid_41_right_inside">
+                                  <div id="wistia_grid_41_right"></div>
+                                </div>
+                              </div>
+                              <div id="wistia_grid_41_below"></div>
+                              <style id="wistia_42_style" type="text/css" class="wistia_injected_style">
+                                #wistia_grid_41_wrapper {
+                                  -moz-box-sizing: content-box;
+                                  -webkit-box-sizing: content-box;
+                                  box-sizing: content-box;
+                                  font-family: Arial, sans-serif;
+                                  font-size: 14px;
+                                  height: 100%;
+                                  position: relative;
+                                  text-align: left;
+                                  width: 100%;
+                                }
+
+                                #wistia_grid_41_wrapper * {
+                                  -moz-box-sizing: content-box;
+                                  -webkit-box-sizing: content-box;
+                                  box-sizing: content-box;
+                                }
+
+                                #wistia_grid_41_above {
+                                  position: relative;
+                                }
+
+                                #wistia_grid_41_main {
+                                  display: block;
+                                  height: 100%;
+                                  position: relative;
+                                }
+
+                                #wistia_grid_41_behind {
+                                  height: 100%;
+                                  left: 0;
+                                  position: absolute;
+                                  top: 0;
+                                  width: 100%;
+                                }
+
+                                #wistia_grid_41_center {
+                                  height: 100%;
+                                  overflow: hidden;
+                                  position: relative;
+                                  width: 100%;
+                                }
+
+                                #wistia_grid_41_front {
+                                  display: none;
+                                  height: 100%;
+                                  left: 0;
+                                  position: absolute;
+                                  top: 0;
+                                  width: 100%;
+                                }
+
+                                #wistia_grid_41_top_inside {
+                                  position: absolute;
+                                  left: 0;
+                                  top: 0;
+                                  width: 100%;
+                                }
+
+                                #wistia_grid_41_top {
+                                  width: 100%;
+                                  position: absolute;
+                                  bottom: 0;
+                                  left: 0;
+                                }
+
+                                #wistia_grid_41_bottom_inside {
+                                  position: absolute;
+                                  left: 0;
+                                  bottom: 0;
+                                  width: 100%;
+                                }
+
+                                #wistia_grid_41_bottom {
+                                  width: 100%;
+                                  position: absolute;
+                                  top: 0;
+                                  left: 0;
+                                }
+
+                                #wistia_grid_41_left_inside {
+                                  height: 100%;
+                                  position: absolute;
+                                  left: 0;
+                                  top: 0;
+                                }
+
+                                #wistia_grid_41_left {
+                                  height: 100%;
+                                  position: absolute;
+                                  right: 0;
+                                  top: 0;
+                                }
+
+                                #wistia_grid_41_right_inside {
+                                  height: 100%;
+                                  right: 0;
+                                  position: absolute;
+                                  top: 0;
+                                }
+
+                                #wistia_grid_41_right {
+                                  height: 100%;
+                                  left: 0;
+                                  position: absolute;
+                                  top: 0;
+                                }
+
+                                #wistia_grid_41_below {
+                                  position: relative;
+                                }
+                              </style>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-msm-error-tracking-show-error="(questionHolder['policyHolder.claimsExists'].submitted || questionHolder['policyHolder.claimsExists'].$dirty || (false &amp;&amp; questionHolder['policyHolder.claimsExists'].$modelValue)) &amp;&amp; questionHolder['policyHolder.claimsExists'].$error.required"
+                  class="help-block ng-hide" data-msm-error-tracking-show-error-event-type="inputerror">
+                  <div class="msm-sprite-lg-alert-square"></div>
+                  <div class="message_holder">Please let us know whether you've had any incidents or claims
+                  </div>
+                </div>
+                <div data-msm-error-tracking-show-error="questionHolder.integrity['confirm_claims_expanded']" data-msm-error-tracking-show-error-event-type="validation"
+                  class="help-block ng-hide">
+                  <div class="msm-sprite-lg-alert-square"></div>
+                  <div class="message_holder">Please confirm that you want to remove all your convictions
+                  </div>
+                </div>
+                <div data-msm-error-tracking-show-error="true &amp;&amp; questionHolder.integrity['confirm_claims']" class="help-block ng-hide"
+                  data-msm-error-tracking-show-error-event-type="validation">
+                  <div class="msm-sprite-lg-alert-square"></div>
+                  <div class="message_holder">Please confirm that you want to remove all your convictions
+                  </div>
+                </div>
+                <div id="policyHolder.claimsExists" class="toggle-with-confirm__wrapper policyholder-claimsexists__toggle-with-confirm ng-untouched ng-not-empty ng-valid-parse ng-valid-required ng-pristine ng-valid ng-valid-confirmed toggle-with-confirm--no msm-animate-enabled"
+                  data-name="policyHolder.claimsExists" data-ng-model="policyHolder.claimsExists" tabindex="-1" data-ng-required="true"
+                  data-required="true" data-msm-answer-store-action="{'compositeCleaner': {'compositeKey':'policyHolder.claims','compositeInitValue':[],'triggerValue':'false'}}"
+                  data-msm-answer-store-key="" data-msm-error-tracking-view-change="" data-msm-toggle-with-confirm="" data-msm-animate-on-breakpoints="xs sm md lg"
+                  data-msm-touch="" data-confirm-on="true" data-initial-value="answers.valueOfAsync('policyHolder.claimsExists', 'false')"
+                  data-confirm-yes-label="Remove" data-on-confirm-yes="analytics.track('buttonInteraction', {eventType: 'click', id: 'Claim.Remove.Confirm.Yes'})"
+                  data-confirm-no-label="Cancel" data-on-confirm-no="analytics.track('buttonInteraction', {eventType: 'click', id: 'Claim.Remove.Confirm.No'})"
+                  data-confirm-value="false" data-toggle-yes-label="Yes" data-on-toggle-yes="analytics.track('FieldInteraction', {eventType: 'click', id: 'policyHolder.claimsExists'})"
+                  data-toggle-yes-value="true" data-toggle-no-label="No" data-on-toggle-no="analytics.track('FieldInteraction', {eventType: 'click', id: 'policyHolder.claimsExists'})"
+                  data-toggle-no-value="false">
+                  <button type="button" class="toggle-with-confirm__toggle-button toggle-with-confirm__toggle-button--yes"
+                    data-ng-click="toggleYes()">Yes</button>
+                  <button type="button" class="toggle-with-confirm__toggle-button toggle-with-confirm__toggle-button--no"
+                    data-ng-click="toggleNo()">No</button>
+                  <button type="button" class="toggle-with-confirm__confirm-button toggle-with-confirm__confirm-button--yes"
+                    data-ng-click="confirmYes()">Remove</button>
+                  <button type="button" class="toggle-with-confirm__confirm-button toggle-with-confirm__confirm-button--no"
+                    data-ng-click="confirmNo()">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <span class="ng-hide" data-msm-integrity-rule="confirm_offences"></span>
+      <div>
+        <div class="toggle-error-with-list" data-ng-class="{'has-error hide-inner-errors': true &amp;&amp; questionHolder.integrity['confirm_offences']}"
+          data-msm-scroll-anchor="policyHolder.offencesExists.toggle-error-with-list">
+          <div class="policyHolder_offencesExists" data-msm-defer-binding="">
+            <span class="ng-hide" data-msm-integrity-rule="confirm_offences_expanded"></span>
+            <div class="row form-group block-animation highlight--help policyholder-offencesexists__form-group" id="policyHolder.offencesExists"
+              data-ng-class="{'has-error': questionHolder['policyHolder.offencesExists'].$invalid &amp;&amp; (questionHolder['policyHolder.offencesExists'].submitted || questionHolder['policyHolder.offencesExists'].$dirty || (false &amp;&amp; questionHolder['policyHolder.offencesExists'].$modelValue)) &amp;&amp; !questionHolder['policyHolder.offencesExists'].$error.confirmed || questionHolder.integrity['confirm_offences_expanded']}"
+              data-msm-error-tracking="policyHolder.offencesExists" data-msm-scroll-anchor="policyHolder.offencesExists" data-msm-question-set-help-aggregate=""
+              data-msm-question-set-help-aggregate-init-open="true" data-msm-error-tracking-enabled="">
+              <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 policyholder-offencesexists padding-md-r">
+                <label for="policyHolder.offencesExists" class="control-label toggle-with-confirm__label policyholder-offencesexists__control-label msm-animate-enabled"
+                  data-ng-class="{'ng-invalid': questionHolder['policyHolder.offencesExists'].$invalid &amp;&amp; (questionHolder['policyHolder.offencesExists'].submitted || questionHolder['policyHolder.offencesExists'].$dirty || (false &amp;&amp; questionHolder['policyHolder.offencesExists'].$modelValue)) &amp;&amp; !questionHolder['policyHolder.offencesExists'].$error.confirmed || questionHolder.integrity['confirm_offences_expanded']}"
+                  data-msm-animate-on-breakpoints="xs sm md lg">
+                  <span class="toggle-with-confirm__label" data-msm-label="{&quot;DEFAULT&quot;:{defaultLabel:&quot;Have you committed any driving offences or had any Fixed Penalty Notices in the last 5 years?&quot;,dynamicLabel:&quot;&quot;}, &quot;ACCOUNT_HOLDER_IS_NOT_POLICY_HOLDER&quot;:{defaultLabel:&quot;&quot;,dynamicLabel:&quot;&quot;}}"
+                    data-msm-dynamic-label-decorator="{prefix: '<em>', postfix:'</em>'}">
+                    <span data-ng-bind-html="rewordedLabel">Have you committed any driving offences or had any Fixed Penalty Notices in the last 5 years?</span>
+                  </span>
+                  <span class="toggle-with-confirm__message">Are you sure you want to remove this?</span>
+                </label>
+                <div class="question-description question-description--policyholder-offencesexists">
+                  <p style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px;">
+                    &nbsp;If you don’t tell your insurer about previous offences, your car insurance may not pay out</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 policyholder-offencesexists pull-right col-content padding-md-r">
+                <button type="button" tabindex="-1" class="helptext__mobile-button"></button>
+                <div class="helptext">
+                  <div data-ng-class="breakpoint.current === 'md' || breakpoint.current === 'lg' ? 'helptext--desktop' : 'helptext--mobile'"
+                    class="helptext--desktop">
+                    <div class="helptext__content">
+                      <p>
+                        <strong>Wondering what counts?</strong>
+                      </p>
+                      <p>Insurers need to know about any driving offences you’ve committed, such as Driving without due care
+                        and attention, or Driving with alcohol level above the limit. They also need to know about any Fixed
+                        Penalty Notices (FPNs) issued for offences such as speeding.</p>
+                      <p>Penalty Charge Notices (PCNs) issued for parking offences do not have to be included, so you don’t
+                        have to mention these.</p>
+                    </div>
+                    <div class="helptext__content--additional">
+                      <div class="clearfix"></div>
+                      <div class="msm-b-video">
+                        <div class="wistia_embed wistia_async_xdeniy9jz5 videoFoam=true wistia_embed_initialized" id="wistia-xdeniy9jz5-2">
+                          <div id="wistia_chrome_32" class="w-chrome" style="display: inline-block; height: 100%; margin: 0px; padding: 0px; position: relative; vertical-align: top; width: 100%; zoom: 1; outline: none; overflow: hidden; box-sizing: content-box;">
+                            <div id="wistia_grid_48_wrapper" style="display: block;">
+                              <div id="wistia_grid_48_above"></div>
+                              <div id="wistia_grid_48_main">
+                                <div id="wistia_grid_48_behind"></div>
+                                <div id="wistia_grid_48_center">
+                                  <div class="w-video-wrapper w-css-reset" style="clip: rect(0px, 0px, 0px, 0px); height: 100%; position: absolute; top: 0px; width: 100%; background-color: rgb(0, 0, 0);"></div>
+                                  <div class="w-ui-container" style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"></div>
+                                </div>
+                                <div id="wistia_grid_48_front"></div>
+                                <div id="wistia_grid_48_top_inside">
+                                  <div id="wistia_grid_48_top"></div>
+                                </div>
+                                <div id="wistia_grid_48_bottom_inside">
+                                  <div id="wistia_grid_48_bottom"></div>
+                                </div>
+                                <div id="wistia_grid_48_left_inside">
+                                  <div id="wistia_grid_48_left"></div>
+                                </div>
+                                <div id="wistia_grid_48_right_inside">
+                                  <div id="wistia_grid_48_right"></div>
+                                </div>
+                              </div>
+                              <div id="wistia_grid_48_below"></div>
+                              <style id="wistia_49_style" type="text/css" class="wistia_injected_style">
+                                #wistia_grid_48_wrapper {
+                                  -moz-box-sizing: content-box;
+                                  -webkit-box-sizing: content-box;
+                                  box-sizing: content-box;
+                                  font-family: Arial, sans-serif;
+                                  font-size: 14px;
+                                  height: 100%;
+                                  position: relative;
+                                  text-align: left;
+                                  width: 100%;
+                                }
+
+                                #wistia_grid_48_wrapper * {
+                                  -moz-box-sizing: content-box;
+                                  -webkit-box-sizing: content-box;
+                                  box-sizing: content-box;
+                                }
+
+                                #wistia_grid_48_above {
+                                  position: relative;
+                                }
+
+                                #wistia_grid_48_main {
+                                  display: block;
+                                  height: 100%;
+                                  position: relative;
+                                }
+
+                                #wistia_grid_48_behind {
+                                  height: 100%;
+                                  left: 0;
+                                  position: absolute;
+                                  top: 0;
+                                  width: 100%;
+                                }
+
+                                #wistia_grid_48_center {
+                                  height: 100%;
+                                  overflow: hidden;
+                                  position: relative;
+                                  width: 100%;
+                                }
+
+                                #wistia_grid_48_front {
+                                  display: none;
+                                  height: 100%;
+                                  left: 0;
+                                  position: absolute;
+                                  top: 0;
+                                  width: 100%;
+                                }
+
+                                #wistia_grid_48_top_inside {
+                                  position: absolute;
+                                  left: 0;
+                                  top: 0;
+                                  width: 100%;
+                                }
+
+                                #wistia_grid_48_top {
+                                  width: 100%;
+                                  position: absolute;
+                                  bottom: 0;
+                                  left: 0;
+                                }
+
+                                #wistia_grid_48_bottom_inside {
+                                  position: absolute;
+                                  left: 0;
+                                  bottom: 0;
+                                  width: 100%;
+                                }
+
+                                #wistia_grid_48_bottom {
+                                  width: 100%;
+                                  position: absolute;
+                                  top: 0;
+                                  left: 0;
+                                }
+
+                                #wistia_grid_48_left_inside {
+                                  height: 100%;
+                                  position: absolute;
+                                  left: 0;
+                                  top: 0;
+                                }
+
+                                #wistia_grid_48_left {
+                                  height: 100%;
+                                  position: absolute;
+                                  right: 0;
+                                  top: 0;
+                                }
+
+                                #wistia_grid_48_right_inside {
+                                  height: 100%;
+                                  right: 0;
+                                  position: absolute;
+                                  top: 0;
+                                }
+
+                                #wistia_grid_48_right {
+                                  height: 100%;
+                                  left: 0;
+                                  position: absolute;
+                                  top: 0;
+                                }
+
+                                #wistia_grid_48_below {
+                                  position: relative;
+                                }
+                              </style>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-msm-error-tracking-show-error="(questionHolder['policyHolder.offencesExists'].submitted || questionHolder['policyHolder.offencesExists'].$dirty || (false &amp;&amp; questionHolder['policyHolder.offencesExists'].$modelValue)) &amp;&amp; questionHolder['policyHolder.offencesExists'].$error.required"
+                  class="help-block ng-hide" data-msm-error-tracking-show-error-event-type="inputerror">
+                  <div class="msm-sprite-lg-alert-square"></div>
+                  <div class="message_holder">Please let us know if you have had any driving offences or fixed penalty notices in the last 5 years
+                  </div>
+                </div>
+                <div data-msm-error-tracking-show-error="questionHolder.integrity['confirm_offences_expanded']" data-msm-error-tracking-show-error-event-type="validation"
+                  class="help-block ng-hide">
+                  <div class="msm-sprite-lg-alert-square"></div>
+                  <div class="message_holder">Please confirm that you want to remove all your offences and/or fixed penalty notices
+                  </div>
+                </div>
+                <div data-msm-error-tracking-show-error="true &amp;&amp; questionHolder.integrity['confirm_offences']" class="help-block ng-hide"
+                  data-msm-error-tracking-show-error-event-type="validation">
+                  <div class="msm-sprite-lg-alert-square"></div>
+                  <div class="message_holder">Please confirm that you want to remove all your offences and/or fixed penalty notices
+                  </div>
+                </div>
+                <div id="policyHolder.offencesExists" class="toggle-with-confirm__wrapper policyholder-offencesexists__toggle-with-confirm ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-confirmed msm-animate-enabled"
+                  data-name="policyHolder.offencesExists" data-ng-model="policyHolder.offencesExists" tabindex="-1" data-ng-required="true"
+                  data-required="true" data-msm-answer-store-action="{'compositeCleaner': {'compositeKey':'policyHolder.drivingOffences','compositeInitValue':[],'triggerValue':'false'}}"
+                  data-msm-answer-store-key="" data-msm-error-tracking-view-change="" data-msm-toggle-with-confirm="" data-msm-animate-on-breakpoints="xs sm md lg"
+                  data-msm-touch="" data-confirm-on="true" data-confirm-yes-label="Remove" data-on-confirm-yes="analytics.track('buttonInteraction', {eventType: 'click', id: 'Offence.RemoveAll.Confirm.Yes'})"
+                  data-confirm-no-label="Cancel" data-on-confirm-no="analytics.track('buttonInteraction', {eventType: 'click', id: 'Offence.RemoveAll.Confirm.No'})"
+                  data-confirm-value="false" data-toggle-yes-label="Yes" data-on-toggle-yes="analytics.track('FieldInteraction', {eventType: 'click', id: 'policyHolder.offencesExists'})"
+                  data-toggle-yes-value="true" data-toggle-no-label="No" data-on-toggle-no="analytics.track('FieldInteraction', {eventType: 'click', id: 'policyHolder.offencesExists'})"
+                  data-toggle-no-value="false">
+                  <button type="button" class="toggle-with-confirm__toggle-button toggle-with-confirm__toggle-button--yes"
+                    data-ng-click="toggleYes()">Yes</button>
+                  <button type="button" class="toggle-with-confirm__toggle-button toggle-with-confirm__toggle-button--no"
+                    data-ng-click="toggleNo()">No</button>
+                  <button type="button" class="toggle-with-confirm__confirm-button toggle-with-confirm__confirm-button--yes"
+                    data-ng-click="confirmYes()">Remove</button>
+                  <button type="button" class="toggle-with-confirm__confirm-button toggle-with-confirm__confirm-button--no"
+                    data-ng-click="confirmNo()">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="policyHolder_hasNonMotoringConvictions" data-msm-defer-binding="">
+        <div class="row form-group hide-when-error highlight--help policyholder-hasnonmotoringconvictions__form-group" id="policyHolder.hasNonMotoringConvictions"
+          data-ng-class="{'has-error': questionHolder['policyHolder.hasNonMotoringConvictions'].$invalid &amp;&amp; (questionHolder['policyHolder.hasNonMotoringConvictions'].submitted || questionHolder['policyHolder.hasNonMotoringConvictions'].$dirty || (false &amp;&amp; questionHolder['policyHolder.hasNonMotoringConvictions'].$modelValue))}"
+          data-msm-error-tracking="policyHolder.hasNonMotoringConvictions" data-msm-scroll-anchor="policyHolder.hasNonMotoringConvictions"
+          data-msm-question-set-help-aggregate="" data-msm-error-tracking-enabled="">
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 padding-md-r">
+            <label for="policyHolder.hasNonMotoringConvictions" class="control-label policyholder-hasnonmotoringconvictions__control-label"
+              data-msm-label="{&quot;DEFAULT&quot;:{defaultLabel:&quot;Do you have any non-driving convictions?&quot;,dynamicLabel:&quot;&quot;}, &quot;ACCOUNT_HOLDER_IS_NOT_POLICY_HOLDER&quot;:{defaultLabel:&quot;&quot;,dynamicLabel:&quot;&quot;}}"
+              data-msm-dynamic-label-decorator="{prefix: '<em>', postfix:'</em>'}">
+              <span data-ng-bind-html="rewordedLabel">Do you have any non-driving convictions?</span>
+            </label>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right col-content padding-md-r">
+            <button type="button" tabindex="-1" class="helptext__mobile-button"></button>
+            <div class="helptext">
+              <div data-ng-class="breakpoint.current === 'md' || breakpoint.current === 'lg' ? 'helptext--desktop' : 'helptext--mobile'"
+                class="helptext--desktop">
+                <div class="helptext__content">
+                  <p>
+                    <strong>Why do we ask?</strong>
+                  </p>
+                  <p>If you have any unspent convictions, it’s really important to tell your insurance company. If you don’t
+                    tell them, your insurance won’t be valid and any claim is likely to be rejected.</p>
+                </div>
+              </div>
+            </div>
+            <div class="help-block ng-hide" data-msm-error-tracking-show-error="(questionHolder['policyHolder.hasNonMotoringConvictions'].submitted || questionHolder['policyHolder.hasNonMotoringConvictions'].$dirty || (false &amp;&amp; questionHolder['policyHolder.hasNonMotoringConvictions'].$modelValue)) &amp;&amp; questionHolder['policyHolder.hasNonMotoringConvictions'].$error.required"
+              data-msm-error-tracking-show-error-event-type="inputerror">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">Please let us know if you have any non-driving convictions</div>
+            </div>
+            <div class="styled-radio toggle-radio  ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-name="policyHolder.hasNonMotoringConvictions"
+              data-ng-model="policyHolder.hasNonMotoringConvictions" tabindex="-1" data-ng-required="true" data-msm-answer-store-key=""
+              data-msm-error-tracking-view-change="" required="required">
+              <span class="styled-radio__input">
+                <input type="radio" data-msm-touch="" data-ng-value="'true'" id="policyHolder.hasNonMotoringConvictionstrue"
+                  data-ng-model="policyHolder.hasNonMotoringConvictions" data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-empty"
+                  name="131" value="true">
+                <label for="policyHolder.hasNonMotoringConvictionstrue">Yes</label>
+              </span>
+              <span class="styled-radio__input">
+                <input type="radio" data-msm-touch="" data-ng-value="'false'" id="policyHolder.hasNonMotoringConvictionsfalse"
+                  data-ng-model="policyHolder.hasNonMotoringConvictions" data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-empty"
+                  name="132" value="false">
+                <label for="policyHolder.hasNonMotoringConvictionsfalse">No</label>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 qs__extra-content padding-md-r"></div>
+        </div>
+      </div>
+      <div class="policyHolder_hasInsuranceEverBeenDeclined" data-msm-defer-binding="">
+        <div class="row form-group hide-when-error highlight--help policyholder-hasinsuranceeverbeendeclined__form-group" id="policyHolder.hasInsuranceEverBeenDeclined"
+          data-ng-class="{'has-error': questionHolder['policyHolder.hasInsuranceEverBeenDeclined'].$invalid &amp;&amp; (questionHolder['policyHolder.hasInsuranceEverBeenDeclined'].submitted || questionHolder['policyHolder.hasInsuranceEverBeenDeclined'].$dirty || (false &amp;&amp; questionHolder['policyHolder.hasInsuranceEverBeenDeclined'].$modelValue))}"
+          data-msm-error-tracking="policyHolder.hasInsuranceEverBeenDeclined" data-msm-scroll-anchor="policyHolder.hasInsuranceEverBeenDeclined"
+          data-msm-question-set-help-aggregate="" data-msm-error-tracking-enabled="">
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 padding-md-r">
+            <label for="policyHolder.hasInsuranceEverBeenDeclined" class="control-label policyholder-hasinsuranceeverbeendeclined__control-label"
+              data-msm-label="{&quot;DEFAULT&quot;:{defaultLabel:&quot;Have you or any additional driver on this policy ever had their insurance declined, cancelled, voided, or had special terms imposed?&quot;,dynamicLabel:&quot;&quot;}, &quot;ACCOUNT_HOLDER_IS_NOT_POLICY_HOLDER&quot;:{defaultLabel:&quot;&quot;,dynamicLabel:&quot;&quot;}}"
+              data-msm-dynamic-label-decorator="{prefix: '<em>', postfix:'</em>'}">
+              <span data-ng-bind-html="rewordedLabel">Have you or any additional driver on this policy ever had their insurance declined, cancelled, voided, or had
+                special terms imposed?</span>
+            </label>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right col-content padding-md-r">
+            <button type="button" tabindex="-1" class="helptext__mobile-button"></button>
+            <div class="helptext">
+              <div data-ng-class="breakpoint.current === 'md' || breakpoint.current === 'lg' ? 'helptext--desktop' : 'helptext--mobile'"
+                class="helptext--desktop">
+                <div class="helptext__content">
+                  <p>
+                    <strong>Why do we ask?</strong>
+                  </p>
+                  <p>Insurers need to know if you or any other driver on the policy has ever had an insurance policy declined,
+                    cancelled, voided or had special terms imposed.</p>
+                </div>
+              </div>
+            </div>
+            <div class="help-block ng-hide" data-msm-error-tracking-show-error="(questionHolder['policyHolder.hasInsuranceEverBeenDeclined'].submitted || questionHolder['policyHolder.hasInsuranceEverBeenDeclined'].$dirty || (false &amp;&amp; questionHolder['policyHolder.hasInsuranceEverBeenDeclined'].$modelValue)) &amp;&amp; questionHolder['policyHolder.hasInsuranceEverBeenDeclined'].$error.required"
+              data-msm-error-tracking-show-error-event-type="inputerror">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">Please let us know if you or any additional driver on this policy have ever been declined driving insurance
+              </div>
+            </div>
+            <div class="styled-radio toggle-radio  ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-name="policyHolder.hasInsuranceEverBeenDeclined"
+              data-ng-model="policyHolder.hasInsuranceEverBeenDeclined" tabindex="-1" data-ng-required="true" data-msm-answer-store-key=""
+              data-msm-error-tracking-view-change="" required="required">
+              <span class="styled-radio__input">
+                <input type="radio" data-msm-touch="" data-ng-value="'true'" id="policyHolder.hasInsuranceEverBeenDeclinedtrue"
+                  data-ng-model="policyHolder.hasInsuranceEverBeenDeclined" data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-empty"
+                  name="134" value="true">
+                <label for="policyHolder.hasInsuranceEverBeenDeclinedtrue">Yes</label>
+              </span>
+              <span class="styled-radio__input">
+                <input type="radio" data-msm-touch="" data-ng-value="'false'" id="policyHolder.hasInsuranceEverBeenDeclinedfalse"
+                  data-ng-model="policyHolder.hasInsuranceEverBeenDeclined" data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-empty"
+                  name="135" value="false">
+                <label for="policyHolder.hasInsuranceEverBeenDeclinedfalse">No</label>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 qs__extra-content padding-md-r"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="questionset-section">
+      <h3 class="msm-title title-lg-left title-md-left title-xs-center ">
+        <span class=" "> Your insurance</span>
+      </h3>
+
+      <div class="policyHolder_numberOfYearsNoClaims" data-msm-defer-binding="">
+        <span class="ng-hide" data-msm-integrity-rule="birthdate_noclaimyears"></span>
+        <div class="row form-group hide-when-error highlight--help policyholder-numberofyearsnoclaims__form-group" id="policyHolder.numberOfYearsNoClaims"
+          data-ng-class="{'has-error': questionHolder['policyHolder.numberOfYearsNoClaims'].$invalid &amp;&amp; (questionHolder['policyHolder.numberOfYearsNoClaims'].submitted || questionHolder['policyHolder.numberOfYearsNoClaims'].$dirty || (false &amp;&amp; questionHolder['policyHolder.numberOfYearsNoClaims'].$modelValue)) || (questionHolder['policyHolder.numberOfYearsNoClaims'].$valid &amp;&amp; questionHolder.integrity['birthdate_noclaimyears'])}"
+          data-msm-error-tracking="policyHolder.numberOfYearsNoClaims" data-msm-scroll-anchor="policyHolder.numberOfYearsNoClaims"
+          data-msm-question-set-help-aggregate="" data-msm-question-set-help-aggregate-init-open="true" data-msm-error-tracking-enabled="">
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 padding-md-r">
+            <label for="policyHolder.numberOfYearsNoClaims" class="control-label policyholder-numberofyearsnoclaims__control-label"
+              data-msm-label="{&quot;DEFAULT&quot;:{defaultLabel:&quot;How many years of no claims discount do you have?&quot;,dynamicLabel:&quot;&quot;}, &quot;ACCOUNT_HOLDER_IS_NOT_POLICY_HOLDER&quot;:{defaultLabel:&quot;&quot;,dynamicLabel:&quot;&quot;}}"
+              data-msm-dynamic-label-decorator="{prefix: '<em>', postfix:'</em>'}">
+              <span data-ng-bind-html="rewordedLabel">How many years of no claims discount do you have?</span>
+            </label>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right col-content padding-md-r">
+            <button type="button" tabindex="-1" class="helptext__mobile-button"></button>
+            <div class="helptext">
+              <div data-ng-class="breakpoint.current === 'md' || breakpoint.current === 'lg' ? 'helptext--desktop' : 'helptext--mobile'"
+                class="helptext--desktop">
+                <div class="helptext__content">
+                  <p>
+                    <strong>Wondering how to find out?</strong>
+                  </p>
+                  <p>Your years of no claims should be on your current insurance documents. It’s the number of years you can
+                    get in writing from your current insurance company.</p>
+                  <p>Bear in mind that you can only use your no claims discount on one car or insurance policy at a time.</p>
+                  <p>Some insurance companies won’t accept your no claims discount if you earned any or all of it on a van or
+                    a motorcycle, company car, fleet insurance or outside of the UK, so check before you buy.</p>
+                  <p>
+                    <strong>Starting from scratch?</strong>
+                  </p>
+                  <p>If this is your first insurance, or if you haven’t driven for a while, start with a zero.</p>
+                </div>
+                <div class="helptext__content--additional">
+                  <div class="clearfix"></div>
+                  <div class="msm-b-video">
+                    <div class="wistia_embed wistia_async_rb03lega7q videoFoam=true wistia_embed_initialized" id="wistia-rb03lega7q-1">
+                      <div id="wistia_chrome_35" class="w-chrome" style="display: inline-block; height: 100%; margin: 0px; padding: 0px; position: relative; vertical-align: top; width: 100%; zoom: 1; outline: none; overflow: hidden; box-sizing: content-box;">
+                        <div id="wistia_grid_55_wrapper" style="display: block;">
+                          <div id="wistia_grid_55_above"></div>
+                          <div id="wistia_grid_55_main">
+                            <div id="wistia_grid_55_behind"></div>
+                            <div id="wistia_grid_55_center">
+                              <div class="w-video-wrapper w-css-reset" style="clip: rect(0px, 0px, 0px, 0px); height: 100%; position: absolute; top: 0px; width: 100%; background-color: rgb(0, 0, 0);"></div>
+                              <div class="w-ui-container" style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"></div>
+                            </div>
+                            <div id="wistia_grid_55_front"></div>
+                            <div id="wistia_grid_55_top_inside">
+                              <div id="wistia_grid_55_top"></div>
+                            </div>
+                            <div id="wistia_grid_55_bottom_inside">
+                              <div id="wistia_grid_55_bottom"></div>
+                            </div>
+                            <div id="wistia_grid_55_left_inside">
+                              <div id="wistia_grid_55_left"></div>
+                            </div>
+                            <div id="wistia_grid_55_right_inside">
+                              <div id="wistia_grid_55_right"></div>
+                            </div>
+                          </div>
+                          <div id="wistia_grid_55_below"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="help-block ng-hide" data-msm-error-tracking-show-error="(questionHolder['policyHolder.numberOfYearsNoClaims'].submitted || questionHolder['policyHolder.numberOfYearsNoClaims'].$dirty || (false &amp;&amp; questionHolder['policyHolder.numberOfYearsNoClaims'].$modelValue)) &amp;&amp; questionHolder['policyHolder.numberOfYearsNoClaims'].$error.required"
+              data-msm-error-tracking-show-error-event-type="inputerror">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">Please let us know how many years of no claims you have</div>
+            </div>
+            <div data-msm-error-tracking-show-error="questionHolder['policyHolder.numberOfYearsNoClaims'].$valid &amp;&amp; questionHolder.integrity['birthdate_noclaimyears']"
+              data-msm-error-tracking-show-error-event-type="validation" class="help-block ng-hide">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">Oops - it doesn’t look like you’ve been driving long enough to have this many years of no claims
+              </div>
+            </div>
+            <div class="dropdown ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-value-existing" data-ng-init="selectionOptions.policyHolder.numberOfYearsNoClaimsOptions = [['0','0'], ['1','1'], ['2','2'], ['3','3'], ['4','4'], ['5','5'], ['6','6'], ['7','7'], ['8','8'], ['9','9'], ['10','10'], ['11','11'], ['12','12'], ['13','13'], ['14','14'], ['15','15'], ['16','16'], ['17','17'], ['18','18'], ['19','19'], ['20','20+']]"
+              data-name="policyHolder.numberOfYearsNoClaims" data-ng-model="policyHolder.numberOfYearsNoClaims" data-msm-touch=""
+              data-ng-required="true" tabindex="-1" data-msm-field-interaction-events="click" data-msm-field-interaction-selector=".btn-group .dropdown-toggle, .btn-group .dropdown-menu, .nativedropdown-wrapper select.form-control"
+              data-msm-dropdown="[[&quot;0&quot;,&quot;0&quot;],[&quot;1&quot;,&quot;1&quot;],[&quot;2&quot;,&quot;2&quot;],[&quot;3&quot;,&quot;3&quot;],[&quot;4&quot;,&quot;4&quot;],[&quot;5&quot;,&quot;5&quot;],[&quot;6&quot;,&quot;6&quot;],[&quot;7&quot;,&quot;7&quot;],[&quot;8&quot;,&quot;8&quot;],[&quot;9&quot;,&quot;9&quot;],[&quot;10&quot;,&quot;10&quot;],[&quot;11&quot;,&quot;11&quot;],[&quot;12&quot;,&quot;12&quot;],[&quot;13&quot;,&quot;13&quot;],[&quot;14&quot;,&quot;14&quot;],[&quot;15&quot;,&quot;15&quot;],[&quot;16&quot;,&quot;16&quot;],[&quot;17&quot;,&quot;17&quot;],[&quot;18&quot;,&quot;18&quot;],[&quot;19&quot;,&quot;19&quot;],[&quot;20&quot;,&quot;20+&quot;]]"
+              data-msm-dropdown-placeholder="Please select" data-msm-dropdown-default="" data-msm-answer-store-key="" data-msm-error-tracking-view-change=""
+              data-msm-select-store-label="" data-msm-check-existing-value="" required="required">
+              <div class="nativedropdown-wrapper form-control" data-ng-class="{'nativedropdown-wrapper--selected': styleSelected}">
+                <select data-ng-model="nativeSelectedItem" data-ng-disabled="isDisabled()" data-ng-options="item[0] as item[1] for item in nativeItems"
+                  class="nativedropdown-wrapper__native form-control ng-pristine ng-untouched ng-valid ng-empty">
+                  <option value="" data-ng-show="true" selected="selected" class="ng-hide">Please select</option>
+                  <option label="0" value="string:0">0</option>
+                  <option label="1" value="string:1">1</option>
+                  <option label="2" value="string:2">2</option>
+                  <option label="3" value="string:3">3</option>
+                  <option label="4" value="string:4">4</option>
+                  <option label="5" value="string:5">5</option>
+                  <option label="6" value="string:6">6</option>
+                  <option label="7" value="string:7">7</option>
+                  <option label="8" value="string:8">8</option>
+                  <option label="9" value="string:9">9</option>
+                  <option label="10" value="string:10">10</option>
+                  <option label="11" value="string:11">11</option>
+                  <option label="12" value="string:12">12</option>
+                  <option label="13" value="string:13">13</option>
+                  <option label="14" value="string:14">14</option>
+                  <option label="15" value="string:15">15</option>
+                  <option label="16" value="string:16">16</option>
+                  <option label="17" value="string:17">17</option>
+                  <option label="18" value="string:18">18</option>
+                  <option label="19" value="string:19">19</option>
+                  <option label="20+" value="string:20">20+</option>
+                </select>
+                <span class="nativedropdown-wrapper__caret glyphicon glyphicon-chevron-down"></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 qs__extra-content padding-md-r"></div>
+        </div>
+      </div>
+
+      <div class="policy_paymentTypeId" data-msm-defer-binding="">
+        <div class="row form-group hide-when-error highlight--help policy-paymenttypeid__form-group" id="policy.paymentTypeId" data-ng-class="{'has-error': questionHolder['policy.paymentTypeId'].$invalid &amp;&amp; (questionHolder['policy.paymentTypeId'].submitted || questionHolder['policy.paymentTypeId'].$dirty || (false &amp;&amp; questionHolder['policy.paymentTypeId'].$modelValue))}"
+          data-msm-error-tracking="policy.paymentTypeId" data-msm-scroll-anchor="policy.paymentTypeId" data-msm-question-set-help-aggregate=""
+          data-msm-error-tracking-enabled="">
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 padding-md-r">
+            <label for="policy.paymentTypeId" class="control-label policy-paymenttypeid__control-label" data-msm-label="{&quot;DEFAULT&quot;:{defaultLabel:&quot;How do you normally pay for your car insurance?&quot;,dynamicLabel:&quot;&quot;}, &quot;ACCOUNT_HOLDER_IS_NOT_POLICY_HOLDER&quot;:{defaultLabel:&quot;&quot;,dynamicLabel:&quot;&quot;}}"
+              data-msm-dynamic-label-decorator="{prefix: '<em>', postfix:'</em>'}">
+              <span data-ng-bind-html="rewordedLabel">How do you normally pay for your car insurance?</span>
+            </label>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right col-content padding-md-r">
+            <button type="button" tabindex="-1" class="helptext__mobile-button"></button>
+            <div class="helptext">
+              <div data-ng-class="breakpoint.current === 'md' || breakpoint.current === 'lg' ? 'helptext--desktop' : 'helptext--mobile'"
+                class="helptext--desktop">
+                <div class="helptext__content">
+                  <p>
+                    <strong>What's the best option?</strong>
+                  </p>
+                  <p>Paying annually means you’ll clear the bill for your whole year’s insurance today, and avoid any fees for
+                    paying monthly. Monthly payments mean you can spread the cost, but you’ll end up paying more in total.</p>
+                  <p>Monthly payments are not available to people under 18, unless the credit agreement is with someone older,
+                    e.g. a parent is paying</p>
+                </div>
+              </div>
+            </div>
+            <div class="help-block ng-hide" data-msm-error-tracking-show-error="(questionHolder['policy.paymentTypeId'].submitted || questionHolder['policy.paymentTypeId'].$dirty || (false &amp;&amp; questionHolder['policy.paymentTypeId'].$modelValue)) &amp;&amp; questionHolder['policy.paymentTypeId'].$error.required"
+              data-msm-error-tracking-show-error-event-type="inputerror">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">Please pick whether you would like to pay annually or monthly
+              </div>
+            </div>
+            <div class="styled-radio toggle-radio  ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" data-ng-init="policy.paymentTypeId='1'"
+              data-name="policy.paymentTypeId" data-ng-model="policy.paymentTypeId" tabindex="-1" data-ng-required="true" data-msm-as-text="Annually"
+              data-msm-answer-store-key="" data-msm-error-tracking-view-change="" required="required">
+              <span class="styled-radio__input">
+                <input type="radio" data-msm-touch="" data-ng-value="'1'" id="policy.paymentTypeId1" data-ng-model="policy.paymentTypeId"
+                  data-msm-radio-store-label="" data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                  name="160" value="1">
+                <label for="policy.paymentTypeId1">Annually</label>
+              </span>
+              <span class="styled-radio__input">
+                <input type="radio" data-msm-touch="" data-ng-value="'2'" id="policy.paymentTypeId2" data-ng-model="policy.paymentTypeId"
+                  data-msm-radio-store-label="" data-msm-field-interaction-events="click" class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                  name="161" value="2">
+                <label for="policy.paymentTypeId2">Monthly</label>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 qs__extra-content padding-md-r"></div>
+        </div>
+      </div>
+      <div class="policy_policyStartDate" data-msm-defer-binding="">
+        <span class="ng-hide" data-msm-integrity-rule="birthdate_policystart"></span>
+        <div class="row form-group hide-when-error highlight--help policy-policystartdate__form-group" id="policy.policyStartDate"
+          data-ng-class="{'has-error': questionHolder['policy.policyStartDate'].$invalid &amp;&amp; (questionHolder['policy.policyStartDate'].submitted || questionHolder['policy.policyStartDate'].$dirty || (false &amp;&amp; questionHolder['policy.policyStartDate'].$modelValue)) || (questionHolder['policy.policyStartDate'].$valid &amp;&amp; questionHolder.integrity['birthdate_policystart'])}"
+          data-msm-error-tracking="policy.policyStartDate" data-msm-scroll-anchor="policy.policyStartDate" data-msm-question-set-help-aggregate=""
+          data-msm-error-tracking-enabled="">
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 padding-md-r">
+            <label for="policy.policyStartDate" class="control-label policy-policystartdate__control-label" data-msm-label="{&quot;DEFAULT&quot;:{defaultLabel:&quot;When would you like your insurance to start?&quot;,dynamicLabel:&quot;&quot;}, &quot;ACCOUNT_HOLDER_IS_NOT_POLICY_HOLDER&quot;:{defaultLabel:&quot;&quot;,dynamicLabel:&quot;&quot;}}"
+              data-msm-dynamic-label-decorator="{prefix: '<em>', postfix:'</em>'}">
+              <span data-ng-bind-html="rewordedLabel">When would you like your insurance to start?</span>
+            </label>
+            <div class="question-description">
+              <p>Pick any date from today to 30 days time</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right col-content padding-md-r">
+            <button type="button" tabindex="-1" class="helptext__mobile-button"></button>
+            <div class="helptext">
+              <div data-ng-class="breakpoint.current === 'md' || breakpoint.current === 'lg' ? 'helptext--desktop' : 'helptext--mobile'"
+                class="helptext--desktop">
+                <div class="helptext__content">
+                  <p>
+                    <strong>Wondering which day to pick?</strong>
+                  </p>
+                  <p>Make sure there’s no gap, so you’re always insured.</p>
+                  <p>Insurers can change their prices according to which day your insurance starts, which means some dates may
+                    be cheaper or more expensive than others.</p>
+                  <p>
+                    <strong>Want to plan further ahead?</strong>
+                  </p>
+                  <p>Most insurers will only let you buy your car insurance up to 30 days ahead, so that's the best time to
+                    find your deal.</p>
+                </div>
+              </div>
+            </div>
+            <div data-msm-error-tracking-show-error="(questionHolder['policy.policyStartDate'].submitted || questionHolder['policy.policyStartDate'].$dirty || (false &amp;&amp; questionHolder['policy.policyStartDate'].$modelValue)) &amp;&amp; questionHolder['policy.policyStartDate'].$error.required"
+              class="help-block ng-hide" data-msm-error-tracking-show-error-event-type="inputerror">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">Please let us know when you'd like the policy to start</div>
+            </div>
+            <div data-msm-error-tracking-show-error="questionHolder['policy.policyStartDate'].$error.dateFormat &amp;&amp; !questionHolder['policy.policyStartDate'].$error.required &amp;&amp; (questionHolder['policy.policyStartDate'].submitted || questionHolder['policy.policyStartDate'].$dirty || (false &amp;&amp; questionHolder['policy.policyStartDate'].$modelValue))"
+              class="help-block ng-hide" data-msm-error-tracking-show-error-event-type="inputerror">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">Date is not formatted correctly!</div>
+            </div>
+            <div data-msm-error-tracking-show-error="questionHolder['policy.policyStartDate'].$valid &amp;&amp; questionHolder.integrity['birthdate_policystart']"
+              data-msm-error-tracking-show-error-event-type="validation" class="help-block ng-hide">
+              <div class="msm-sprite-lg-alert-square"></div>
+              <div class="message_holder">Oops - it doesn’t look like you’re old enough to be insured to drive a car
+              </div>
+            </div>
+            <div class="date-options-dropdown dropdown ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-msm-date-options-dropdown=""
+              data-msm-date-options-dropdown-id-name="policy.policyStartDate" data-msm-date-options-dropdown-placeholder-name="Please choose a date"
+              data-msm-date-options-dropdown-day-text-variables="['Today', 'Tomorrow']" data-msm-date-options-dropdown-days="30"
+              data-msm-date-options-dropdown-days-by-options="0" data-msm-date-options-dropdown-show-day-names-in-dropdown="true"
+              data-msm-date-options-dropdown-show-long-dates="false" data-msm-answer-store-key="" id="policy.policyStartDate"
+              name="policy.policyStartDate" data-ng-model="policy.policyStartDate" data-ng-required="true" data-msm-field-interaction-events="click"
+              data-msm-field-interaction-selector=".styled-radio__input, .dropdown-toggle, .dropdown-menu, .nativedropdown-wrapper select.form-control"
+              required="required">
+              <div class="styled-radio selection-list">
+                <div id="policy.policyStartDate_dropdown" name="policy.policyStartDate_dropdown" data-ng-model="msmDateOptionsDropdownCtrl.msmDateOptionsDropdownModel"
+                  data-msm-dropdown-placeholder="Please choose a date" data-msm-dropdown="[[&quot;2018-04-05&quot;,&quot;Thursday 5th April (Today)&quot;],[&quot;2018-04-06&quot;,&quot;Friday 6th April (Tomorrow)&quot;],[&quot;2018-04-07&quot;,&quot;Saturday 7th April &quot;],[&quot;2018-04-08&quot;,&quot;Sunday 8th April &quot;],[&quot;2018-04-09&quot;,&quot;Monday 9th April &quot;],[&quot;2018-04-10&quot;,&quot;Tuesday 10th April &quot;],[&quot;2018-04-11&quot;,&quot;Wednesday 11th April &quot;],[&quot;2018-04-12&quot;,&quot;Thursday 12th April &quot;],[&quot;2018-04-13&quot;,&quot;Friday 13th April &quot;],[&quot;2018-04-14&quot;,&quot;Saturday 14th April &quot;],[&quot;2018-04-15&quot;,&quot;Sunday 15th April &quot;],[&quot;2018-04-16&quot;,&quot;Monday 16th April &quot;],[&quot;2018-04-17&quot;,&quot;Tuesday 17th April &quot;],[&quot;2018-04-18&quot;,&quot;Wednesday 18th April &quot;],[&quot;2018-04-19&quot;,&quot;Thursday 19th April &quot;],[&quot;2018-04-20&quot;,&quot;Friday 20th April &quot;],[&quot;2018-04-21&quot;,&quot;Saturday 21st April &quot;],[&quot;2018-04-22&quot;,&quot;Sunday 22nd April &quot;],[&quot;2018-04-23&quot;,&quot;Monday 23rd April &quot;],[&quot;2018-04-24&quot;,&quot;Tuesday 24th April &quot;],[&quot;2018-04-25&quot;,&quot;Wednesday 25th April &quot;],[&quot;2018-04-26&quot;,&quot;Thursday 26th April &quot;],[&quot;2018-04-27&quot;,&quot;Friday 27th April &quot;],[&quot;2018-04-28&quot;,&quot;Saturday 28th April &quot;],[&quot;2018-04-29&quot;,&quot;Sunday 29th April &quot;],[&quot;2018-04-30&quot;,&quot;Monday 30th April &quot;],[&quot;2018-05-01&quot;,&quot;Tuesday 1st May &quot;],[&quot;2018-05-02&quot;,&quot;Wednesday 2nd May &quot;],[&quot;2018-05-03&quot;,&quot;Thursday 3rd May &quot;],[&quot;2018-05-04&quot;,&quot;Friday 4th May &quot;]]"
+                  data-ng-change="updateModel()" class="ng-pristine ng-untouched ng-valid ng-empty">
+                  <div class="nativedropdown-wrapper form-control" data-ng-class="{'nativedropdown-wrapper--selected': styleSelected}">
+                    <select data-ng-model="nativeSelectedItem" data-ng-disabled="isDisabled()" data-ng-options="item[0] as item[1] for item in nativeItems"
+                      class="nativedropdown-wrapper__native form-control ng-pristine ng-untouched ng-valid ng-empty">
+                      <option value="" data-ng-show="true" selected="selected" class="ng-hide">Please choose a date</option>
+                      <option label="Thursday 5th April (Today)" value="string:2018-04-05">Thursday 5th April (Today)</option>
+                      <option label="Friday 6th April (Tomorrow)" value="string:2018-04-06">Friday 6th April (Tomorrow)</option>
+                      <option label="Saturday 7th April " value="string:2018-04-07">Saturday 7th April </option>
+                      <option label="Sunday 8th April " value="string:2018-04-08">Sunday 8th April </option>
+                      <option label="Monday 9th April " value="string:2018-04-09">Monday 9th April </option>
+                      <option label="Tuesday 10th April " value="string:2018-04-10">Tuesday 10th April </option>
+                      <option label="Wednesday 11th April " value="string:2018-04-11">Wednesday 11th April </option>
+                      <option label="Thursday 12th April " value="string:2018-04-12">Thursday 12th April </option>
+                      <option label="Friday 13th April " value="string:2018-04-13">Friday 13th April </option>
+                      <option label="Saturday 14th April " value="string:2018-04-14">Saturday 14th April </option>
+                      <option label="Sunday 15th April " value="string:2018-04-15">Sunday 15th April </option>
+                      <option label="Monday 16th April " value="string:2018-04-16">Monday 16th April </option>
+                      <option label="Tuesday 17th April " value="string:2018-04-17">Tuesday 17th April </option>
+                      <option label="Wednesday 18th April " value="string:2018-04-18">Wednesday 18th April </option>
+                      <option label="Thursday 19th April " value="string:2018-04-19">Thursday 19th April </option>
+                      <option label="Friday 20th April " value="string:2018-04-20">Friday 20th April </option>
+                      <option label="Saturday 21st April " value="string:2018-04-21">Saturday 21st April </option>
+                      <option label="Sunday 22nd April " value="string:2018-04-22">Sunday 22nd April </option>
+                      <option label="Monday 23rd April " value="string:2018-04-23">Monday 23rd April </option>
+                      <option label="Tuesday 24th April " value="string:2018-04-24">Tuesday 24th April </option>
+                      <option label="Wednesday 25th April " value="string:2018-04-25">Wednesday 25th April </option>
+                      <option label="Thursday 26th April " value="string:2018-04-26">Thursday 26th April </option>
+                      <option label="Friday 27th April " value="string:2018-04-27">Friday 27th April </option>
+                      <option label="Saturday 28th April " value="string:2018-04-28">Saturday 28th April </option>
+                      <option label="Sunday 29th April " value="string:2018-04-29">Sunday 29th April </option>
+                      <option label="Monday 30th April " value="string:2018-04-30">Monday 30th April </option>
+                      <option label="Tuesday 1st May " value="string:2018-05-01">Tuesday 1st May </option>
+                      <option label="Wednesday 2nd May " value="string:2018-05-02">Wednesday 2nd May </option>
+                      <option label="Thursday 3rd May " value="string:2018-05-03">Thursday 3rd May </option>
+                      <option label="Friday 4th May " value="string:2018-05-04">Friday 4th May </option>
+                    </select>
+                    <span class="nativedropdown-wrapper__caret glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 qs__extra-content padding-md-r"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row form-group" data-ng-show="includeReady()">
+    <div class="col-sm-7 col-md-4 col-md-offset-6 hidden-xs" data-ng-if="!previousPage &amp;&amp; templateUrl">
+      <button type="button" class="btn btn-primary btn-continue btn-continue--alone" data-ng-class="{loading:buttonSpinner}" data-ng-disabled="buttonDisable || questionHolder.$pending"
+        data-ng-show="nextPage &amp;&amp; templateUrl" data-click-with-validation="" data-ng-click="msmUnloadMessageCtrl.enabled=false; buttonSpinner=true; questionsNavigation.turn(questionHolder)">
+        Continue to step 2
+      </button>
+    </div>
+
+
+
+    <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+      <button type="button" class="btn btn-primary btn-continue" data-ng-class="{loading:buttonSpinner}" data-ng-disabled="buttonDisable || questionHolder.$pending"
+        data-ng-show="nextPage &amp;&amp; templateUrl" data-click-with-validation="" data-ng-click="msmUnloadMessageCtrl.enabled=false; buttonSpinner=true; questionsNavigation.turn(questionHolder)">
+        Continue to step 2
+      </button>
+      <button data-ng-class="{loading:buttonSpinner}" data-ng-disabled="buttonDisable || questionHolder.$pending || !questionsNavigation.formProcessable.value || !formIsReady"
+        type="button" class="btn btn-primary btn-result ng-hide" data-ng-show="!nextPage &amp;&amp; templateUrl" data-click-with-validation=""
+        data-ng-click="msmUnloadMessageCtrl.enabled=false; buttonSpinner=true; questionsNavigation.finish(questionHolder, answers.valueOf('anonymousEnquiry') === true)">
+        GET QUOTES
+      </button>
+      <button type="button" class="btn btn-primary btn-previous ng-hide" data-ng-disabled="buttonDisable || questionHolder.$pending"
+        data-ng-show="previousPage &amp;&amp; templateUrl" data-ng-click="msmUnloadMessageCtrl.enabled=false; questionsNavigation.turn(questionHolder, true)">
+        Previous page
+      </button>
+    </div>
+  </div>
+  <div class="qs__message qs__message--warning ng-hide" data-ng-show="questionSetProcessorError">
+    <p>
+      <span>Oops!</span> We encountered a problem.
+      <button type="button" class="btn-link btn-link-simple" data-ng-click="questionsNavigation.turn(questionHolder, 0, true)">Please review your answers
+      </button>
+    </p>
+  </div>
+  <div class="qs__message qs__message--warning row ng-hide" data-ng-show="questionSetProcessorError500">
+    <p>
+      <strong>Sorry </strong>, we're having technical difficulties getting quotes from the insurers.
+      <button type="button" class="btn-link btn-link-simple" data-ng-click="questionsNavigation.finish(questionHolder, answers.valueOf('anonymousEnquiry') === true)">
+        Try again
+      </button>
+      , it'll be worth it, promise.
+    </p>
+  </div>
+  <input autocomplete="address-level4" hidden="true">
+</form>

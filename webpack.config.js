@@ -15,7 +15,9 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     contentBase: "./dist",
-    hot: true
+    hot: true,
+    host: '0.0.0.0',
+    disableHostCheck: true
   },
   module: {
     rules: [

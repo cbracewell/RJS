@@ -1,13 +1,11 @@
 import Password from './PasswordSchema';
 
 export const Schema: any = {
-  title: 'Login',
-  description: 'A simple login form.',
+  title: 'Register',
   type: 'object',
   definitions: {
     password: Password.Schema,
   },
-  required: ['username', 'email'],
   properties: {
     username: {
       title: 'Username',
@@ -20,14 +18,14 @@ export const Schema: any = {
       format: 'email',
       minLength: 6
     },
-    ...Password.Schema.properties
+    password: { title: '', '$ref': '#/definitions/password' }
   }
 };
 
 export const UISchema: any = {
   username: { 'ui:placeholder': 'Randell' },
   email: { 'ui:placeholder': 'randell@gmail.com' },
-  ...Password.UISchema
+  password: Password.UISchema
 };
 
 export const Validation = (formData: any, errors: any) => ({

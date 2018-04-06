@@ -30,8 +30,12 @@ class StepperContainer extends React.Component<Props, State> {
         step: this.state.step + 1
       });
     } else {
-      console.log('Submitting stuff');
+      alert('Submitting all the things');
     }
+  }
+
+  handleStepSelection = (step: any) => (e: any) => {
+    this.setState({ step });
   }
 
   handleChange = ({formData}: any) => {
@@ -39,7 +43,7 @@ class StepperContainer extends React.Component<Props, State> {
       formData: {
         ...this.state.formData, 
         ...formData
-      }, 
+      },
     });
   }
 
@@ -52,20 +56,20 @@ class StepperContainer extends React.Component<Props, State> {
   }
 
   render() {
-    console.log('UISchema', UISchema);
-    
+    const { formData, step, stepCount } = this.state;
     return (
       <Form 
-        schema={Schema[this.state.step]}
-        onChange={this.handleChange}
+        schema={Schema[step]}
         uiSchema={UISchema}
+        onChange={this.handleChange}
         onSubmit={this.handleNext}
-        formData={this.state.formData}
+        formData={formData}
         widgets={widgets}
       >
         <div className="btn-group" role="group" aria-label="Basic example">
-          <button type="button" onClick={this.handleBack} className="btn btn-secondary">Back</button>
-          <button type="submit" className="btn btn-primary">Next</button>
+          <button type="button" disabled={step === 1} onClick={this.handleBack} className="btn btn-secondary">Back</button>
+          {Object.keys(Schema).map((item, i) => (<button type="button" key={i} onClick={this.handleStepSelection(i + 1)}>{i + 1}</button>))}
+          <button type="submit" className="btn btn-primary">{step === stepCount ? 'Submit' : 'Next'}</button>
         </div>
       </Form>
     );
